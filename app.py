@@ -1,14 +1,13 @@
 import os
 import streamlit as st
 from google import genai
+from pypdf import PdfReader
 
 # Sayfa Ayarları
 st.set_page_config(page_title="Doküman Asistanı", page_icon="🤖")
 st.title("🤖 Gemini Doküman Asistanı")
 
-# API Anahtarı Önceliği:
-# 1. Streamlit Secrets (Bulut için)
-# 2. Doğrudan API Key (Kendi bilgisayarında test için)
+# API Anahtarı Önceliği (Streamlit Secrets / Yedek)
 YEDEK_API_KEY = ""
 
 try:
@@ -17,28 +16,32 @@ except Exception:
     GEMINI_API_KEY = YEDEK_API_KEY
 
 if not GEMINI_API_KEY:
-    st.error("⚠️ API Anahtarı bulunamadı!")
+    st.error("⚠️ API Anahtarı bulunamadı! Lütfen Streamlit Secrets ayarlarını kontrol edin.")
     st.stop()
 
 client = genai.Client(api_key=GEMINI_API_KEY)
 
-# bilgi.txt okuma
+# PDF okuma fonksiyonu
 @st.cache_data
-def dokuman_oku():
+def pdf_oku(pdf_yolu):
     try:
-        with open("dokuman.txt", "r", encoding="utf-8") as dosya:
-            return dosya.read()
-    except FileNotFoundError:
+        reader = PdfReader(pdf_yolu)
+        metin = ""
+        for page in reader.pages:
+            metin += page.extract_text() + "\n"
+        return metin
+    except Exception as e:
         return None
 
-dosya_icerigi = dokuman_oku()
+# Okunacak dosya adı (ACC.pdf)
+dosya_icerigi = pdf_oku("ACC.pdf")
 
 if dosya_icerigi is None:
-    st.error("❌ 'bilgi.txt' dosyası bulunamadı! Lütfen aynı klasöre ekleyin.")
+    st.error("❌ 'ACC.pdf' dosyası bulunamadı! Lütfen GitHub deposuna bu isimde dosyayı eklediğinizden emin olun.")
 else:
-    st.success("📄 Doküman başarıyla yüklendi!")
+    st.success("📄 'ACC.pdf' dokümanı başarıyla yüklendi!")
     
-    kullanici_sorusu = st.text_input("Doküman hakkında ne öğrenmek istiyorsun?", placeholder="Örn: Ahmet kaç doğumludur?")
+    kullanici_sorusu = st.text_input("Doküman hakkında ne öğrenmek istiyorsun?", placeholder="Örn: Dokümandaki ana konular nelerdir?")
 
     if st.button("Soruyu Gönder", type="primary"):
         if kullanici_sorusu.strip() == "":
