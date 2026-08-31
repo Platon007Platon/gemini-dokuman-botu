@@ -258,7 +258,7 @@ KULLANICI SORUSU:
             try:
                 # DÜZELTME: Model ismi güncellendi
                 response = client.models.generate_content(
-                    model='gemini-2.5-flash',
+                    model='gemini-3.6-flash',
                     contents=prompt_metni
                 )
                 cevap = response.text
