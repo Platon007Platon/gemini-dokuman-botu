@@ -1,9 +1,6 @@
 import os
 import glob
 import streamlit as st
-import numpy as np
-import faiss
-from sentence_transformers import SentenceTransformer
 from google import genai
 from pypdf import PdfReader
 
@@ -50,13 +47,6 @@ st.markdown("""
     }
     </style>
 """, unsafe_allow_html=True)
-
-# --- VEKTÖR EMBEDDING MODELİNİ YÜKLE ---
-@st.cache_resource
-def load_embedder():
-    return SentenceTransformer('all-MiniLM-L6-v2')
-
-embedder = load_embedder()
 
 # --- GÜVENLİK KONTROLÜ (API KEY) ---
 YEDEK_API_KEY = ""
@@ -117,51 +107,37 @@ with st.expander("🔒 Yönetici / PDF Seçimi"):
     elif girilen_sifre != "":
         st.error("Hatalı şifre!")
 
-# --- SEÇİLİ PDF'LERİ VEKTÖRLEŞTİRME VE İNDEKSLEME ---
+# --- SEÇİLİ PDF'LERİ OKUMA FONKSİYONU ---
 @st.cache_data
-def secili_pdfleri_vektorlestir(pdf_listesi, chunk_size=700, overlap=100):
+def secili_pdfleri_oku(pdf_listesi):
     if not pdf_listesi:
-        return None, None
+        return None
         
-    parcalar = []
+    tum_metin = ""
     for pdf_yolu in pdf_listesi:
         try:
             reader = PdfReader(pdf_yolu)
-            metin = ""
+            tum_metin += f"\n--- {pdf_yolu} DÖKÜMANI BAŞLANGICI ---\n"
             for page in reader.pages:
-                metin += page.extract_text() or ""
-            
-            # Metni küçük parçalara bölme
-            for i in range(0, len(metin), chunk_size - overlap):
-                parca = metin[i:i + chunk_size]
-                if parca.strip():
-                    parcalar.append(parca)
+                tum_metin += page.extract_text() or ""
+            tum_metin += f"\n--- {pdf_yolu} DÖKÜMANI BİTİŞİ ---\n"
         except Exception:
             continue
             
-    if not parcalar:
-        return None, None
-
-    # FAISS Vektör İndeksi Oluşturma
-    embeddings = embedder.encode(parcalar, convert_to_numpy=True)
-    dimension = embeddings.shape[1]
-    index = faiss.IndexFlatL2(dimension)
-    index.add(np.array(embeddings).astype('float32'))
-
-    return index, parcalar
+    return tum_metin if tum_metin.strip() != "" else None
 
 # --- BAŞLIK ---
 st.markdown('<div class="big-title">Belge Asistanı  ✈️ </div>', unsafe_allow_html=True)
 
-# Vektör Veritabanı Hazırlığı
+# Sadece seçilen PDF'lerin metinlerini birleştir
 aktif_pdfler = st.session_state.get("secili_pdfler", [])
-index, parcalar = secili_pdfleri_vektorlestir(aktif_pdfler)
+dosya_icerigi = secili_pdfleri_oku(aktif_pdfler)
 
 if not aktif_pdfler:
     st.warning("⚠️ Lütfen Yönetici panelinden soruların aranacağı en az 1 adet PDF seçin.")
     st.stop()
 
-if index is None or parcalar is None:
+if dosya_icerigi is None:
     st.warning("Henüz sistemde okunabilir bir döküman bulunmuyor.")
     st.stop()
 
@@ -176,18 +152,12 @@ for message in st.session_state.messages:
 
 st.caption("Made by Serd@R T.")
 
-# --- SOHBET İŞLEMLERİ (VEKTÖR RAG SORGULAMA) ---
+# --- SOHBET İŞLEMLERİ ---
 if kullanici_sorusu := st.chat_input("Ne öğrenmek istiyorsun?"):
     
     # Kullanıcı mesajını ekrana ve hafızaya ekle
     st.chat_message("user").markdown(kullanici_sorusu)
     st.session_state.messages.append({"role": "user", "content": kullanici_sorusu})
-
-    # Vektör Arama: Soru ile en alakalı 4 metin parçasını bul
-    soru_vektoru = embedder.encode([kullanici_sorusu], convert_to_numpy=True)
-    distances, indices = index.search(np.array(soru_vektoru).astype('float32'), k=min(4, len(parcalar)))
-    
-    alakali_baglam = "\n---\n".join([parcalar[i] for i in indices[0] if i < len(parcalar)])
 
     prompt_metni = f"""
 Sen "Belge Asistanı  ✈️ " adında zeki bir asistansın.
@@ -211,7 +181,7 @@ Aradığınız bilgi dökümanda doğrudan bulunamadı.
 *(O konuyla ilgili dökümandaki açıklama)*
 
 DÖKÜMAN İÇERİKLERİ:
-{alakali_baglam}
+{dosya_icerigi}
 
 KULLANICI SORUSU:
 {kullanici_sorusu}
@@ -221,7 +191,7 @@ KULLANICI SORUSU:
         with st.spinner("Seçili belgeler taranıyor..."):
             try:
                 response = client.models.generate_content(
-                    model='gemini-2.5-flash',
+                    model='gemini-3.6-flash',
                     contents=prompt_metni
                 )
                 cevap = response.text
