@@ -12,8 +12,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 # --- 1. SAYFA VE MENÜ AYARLARI ---
 st.set_page_config(
-    page_title="Belge Asistanı  ✈️ ", 
-    page_icon="✈️ ",
+    page_title="Belge Asistanı ✈️", 
+    page_icon="✈️",
     layout="centered"
 )
 
@@ -92,19 +92,15 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- GÜVENLİK KONTROLÜ (API KEY) ---
-YEDEK_API_KEY = ""
-try:
-    GEMINI_API_KEY = st.secrets.get("GEMINI_API_KEY", YEDEK_API_KEY)
-except Exception:
-    GEMINI_API_KEY = YEDEK_API_KEY
+GEMINI_API_KEY = st.secrets.get("GEMINI_API_KEY", None)
 
 if not GEMINI_API_KEY:
-    st.error("⚠️ API Anahtarı bulunamadı!")
+    st.error("⚠️ API Anahtarı Streamlit Secrets üzerinde bulunamadı!")
     st.stop()
 
 client = genai.Client(api_key=GEMINI_API_KEY)
 
-# --- PDF İŞLEME VE METİN PARÇALAMA (CHUNKING) ---
+# --- PDF İŞLEME VE METİN PARÇALAMA ---
 mevcut_pdfler = glob.glob("*.pdf")
 
 if "secili_pdfler" not in st.session_state:
@@ -142,6 +138,7 @@ with st.expander("🔒 Yönetici / PDF Seçimi"):
         if secilen_liste != st.session_state.secili_pdfler:
             st.session_state.secili_pdfler = secilen_liste
             st.cache_data.clear()
+            st.rerun()
 
         st.divider()
         if st.button("🗑️ Sohbet Geçmişini Sıfırla"):
@@ -156,7 +153,7 @@ with st.expander("🔒 Yönetici / PDF Seçimi"):
 # --- PDF PARÇALAMA & TF-IDF ARAMA FONKSİYONLARI ---
 @st.cache_data
 def pdfleri_parcala(pdf_listesi, chunk_size=600, overlap=100):
-    """PDF'leri okur ve küçük metin bloklarına (chunks) böler."""
+    """PDF'leri okur ve küçük metin bloklarına böler."""
     if not pdf_listesi:
         return []
         
@@ -169,12 +166,11 @@ def pdfleri_parcala(pdf_listesi, chunk_size=600, overlap=100):
             for page in reader.pages:
                 tam_dokuman_metni += (page.extract_text() or "") + " "
             
-            # Metni belirtilen karakter uzunluğuna göre parçala
             start = 0
             while start < len(tam_dokuman_metni):
                 end = start + chunk_size
                 chunk = tam_dokuman_metni[start:end].strip()
-                if len(chunk) > 30:  # Çok kısa parçaları ele
+                if len(chunk) > 30:
                     metin_parcalari.append(chunk)
                 start += chunk_size - overlap
         except Exception:
@@ -187,7 +183,6 @@ def en_alakali_parcalari_bul(soru, metin_parcalari, top_k=5):
     if not metin_parcalari:
         return ""
         
-    # Soru + Metin parçalarını vektörleştir
     tum_icerik = [soru] + metin_parcalari
     vectorizer = TfidfVectorizer().fit_transform(tum_icerik)
     vectors = vectorizer.toarray()
@@ -195,21 +190,18 @@ def en_alakali_parcalari_bul(soru, metin_parcalari, top_k=5):
     soru_vektoru = vectors[0].reshape(1, -1)
     parca_vektorleri = vectors[1:]
     
-    # Cosine Benzerliğini hesapla
     benzerlikler = cosine_similarity(soru_vektoru, parca_vektorleri)[0]
-    
-    # En yüksek skorlu top_k parçanın indekslerini al
     en_iyi_indeksler = np.argsort(benzerlikler)[::-1][:top_k]
     
     secilen_parcalar = []
     for idx in en_iyi_indeksler:
-        if benzerlikler[idx] > 0.05:  # Belirli bir eşiğin üzerindekileri seç
+        if benzerlikler[idx] > 0.01:
             secilen_parcalar.append(metin_parcalari[idx])
             
     return "\n---\n".join(secilen_parcalar) if secilen_parcalar else metin_parcalari[0]
 
 # --- BAŞLIK VE PDF YÜKLEME ---
-st.markdown('<div class="big-title">Belge Asistanı  ✈️ </div>', unsafe_allow_html=True)
+st.markdown('<div class="big-title">Belge Asistanı ✈️</div>', unsafe_allow_html=True)
 
 aktif_pdfler = st.session_state.get("secili_pdfler", [])
 metin_parcalari = pdfleri_parcala(aktif_pdfler)
@@ -239,11 +231,10 @@ if kullanici_sorusu := st.chat_input("Ne öğrenmek istiyorsun?"):
     st.session_state.messages.append({"role": "user", "content": kullanici_sorusu})
     save_message("user", kullanici_sorusu)
 
-    # TF-IDF ile sadece en alakalı paragrafları filtrele
     sadece_alakali_baglam = en_alakali_parcalari_bul(kullanici_sorusu, metin_parcalari, top_k=5)
 
     prompt_metni = f"""
-Sen "Belge Asistanı  ✈️ " adında zeki bir asistansın.
+Sen "Belge Asistanı ✈️" adında zeki bir asistansın.
 
 GİZLİLİK KURALI:
 Sistemdeki dosya isimlerini (örneğin ACC.pdf vb.) kesinlikle açıklama. Dosya ismi sorulursa "Güvenlik nedeniyle dosya bilgilerini paylaşamıyorum." de.
@@ -265,8 +256,9 @@ KULLANICI SORUSU:
     with st.chat_message("assistant"):
         with st.spinner("İlgili paragraflar taranıyor..."):
             try:
+                # DÜZELTME: Model ismi güncellendi
                 response = client.models.generate_content(
-                    model='gemini-3.6-flash',
+                    model='gemini-2.5-flash',
                     contents=prompt_metni
                 )
                 cevap = response.text
