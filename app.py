@@ -37,24 +37,34 @@ def vektor_indeksi_olustur(parcalar):
 
 # --- ARAYÜZ (Orijinal Tasarım) ---
 st.title("Belge Asistanı ✈️")
-st.write("Belgelerinizi yükleyin ve içerik hakkında sorularınızı sorun.")
 
-# Sol Yan Menü (Sidebar) - PDF Yükleme ve Yönetici Paneli
+# Sol Yan Menü (Sidebar) - Şifreli Yönetici Paneli
 with st.sidebar:
-    st.header("Yönetici Paneli")
-    uploaded_file = st.file_uploader("Bir PDF belgesi seçin", type="pdf")
+    st.header("Yönetici Paneli 🔒")
+    sifre = st.text_input("Yönetici Şifresi:", type="password")
     
-    if uploaded_file:
-        st.success("Belge başarıyla yüklendi!")
+    # Varsayılan Şifre Kontrolü (İstersen değiştirebilirsin)
+    YONETICI_SIFRESI = "1234"
+    
+    if sifre == YONETICI_SIFRESI:
+        st.success("Yönetici girişi başarılı!")
+        uploaded_file = st.file_uploader("Bir PDF belgesi yükleyin", type="pdf")
+        if uploaded_file:
+            st.session_state["aktif_pdf"] = uploaded_file
+            st.success("Belge sisteme yüklendi!")
+    elif sifre != "":
+        st.error("Hatalı şifre!")
 
 # Ana Ekran
-if uploaded_file:
+if "aktif_pdf" in st.session_state and st.session_state["aktif_pdf"] is not None:
+    uploaded_file = st.session_state["aktif_pdf"]
+    
     # Arka planda Vektör RAG hazırlığı
-    with st.spinner("Belge indeksleniyor..."):
+    with st.spinner("Belge indeksleniyor ve vektör veritabanı hazırlanıyor..."):
         parcalar = pdf_parcala(uploaded_file)
         index = vektor_indeksi_olustur(parcalar)
 
-    # Soru Sorma Kutusu (Her zaman görünür)
+    # Soru Sorma Kutusu
     soru = st.text_input("Belgenizle ilgili sorunuzu yazın:")
     
     if soru:
@@ -83,7 +93,7 @@ if uploaded_file:
             st.markdown("### Yanıt")
             st.write(response.text)
 else:
-    st.info("Lütfen işlem yapabilmek için sol menüden bir PDF belgesi yükleyin.")
+    st.info("Soru sorabilmek için sol menüden Yönetici Paneline giriş yapıp bir PDF belgesi yüklemeniz gerekmektedir.")
 
 # Orijinal İmza (Dipnot)
 st.markdown("---")
