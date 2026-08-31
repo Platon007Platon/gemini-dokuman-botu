@@ -5,10 +5,10 @@ from sentence_transformers import SentenceTransformer
 import faiss
 from google import genai
 
-# Sayfa Yapılandırması (Orijinal Belge Asistanı Teması)
-st.set_page_config(page_title="Belge Asistanı", page_icon="📄", layout="wide")
+# Sayfa Yapılandırması (Orijinal Başlık ve Emoji)
+st.set_page_config(page_title="Belge Asistanı ✈️", page_icon="✈️", layout="wide")
 
-# Vektör Modelini Yükle
+# Vektör Modelini Önbelleğe Al
 @st.cache_resource
 def load_embedder():
     return SentenceTransformer('all-MiniLM-L6-v2')
@@ -35,13 +35,13 @@ def vektor_indeksi_olustur(parcalar):
     index.add(np.array(embeddings).astype('float32'))
     return index
 
-# --- ARAYÜZ (Orijinal Belge Asistanı) ---
-st.title("📄 Belge Asistanı")
+# --- ARAYÜZ (Orijinal Tasarım) ---
+st.title("Belge Asistanı ✈️")
 st.write("Belgelerinizi yükleyin ve içerik hakkında sorularınızı sorun.")
 
-# Sol Yan Menü (Sidebar) - PDF Yükleme
+# Sol Yan Menü (Sidebar) - PDF Yükleme ve Yönetici Paneli
 with st.sidebar:
-    st.header("Doküman Yönetimi")
+    st.header("Yönetici Paneli")
     uploaded_file = st.file_uploader("Bir PDF belgesi seçin", type="pdf")
     
     if uploaded_file:
@@ -54,12 +54,12 @@ if uploaded_file:
         parcalar = pdf_parcala(uploaded_file)
         index = vektor_indeksi_olustur(parcalar)
 
-    # Soru-Cevap Alanı
+    # Soru Sorma Kutusu (Her zaman görünür)
     soru = st.text_input("Belgenizle ilgili sorunuzu yazın:")
     
     if soru:
         with st.spinner("Yanıt hazırlanıyor..."):
-            # En alakalı parçaları getir
+            # Vektör arama ile en alakalı parçaları çek
             soru_vektoru = embedder.encode([soru], convert_to_numpy=True)
             distances, indices = index.search(np.array(soru_vektoru).astype('float32'), k=3)
             baglam = "\n---\n".join([parcalar[i] for i in indices[0] if i < len(parcalar)])
@@ -74,7 +74,6 @@ if uploaded_file:
             SORU: {soru}
             """
             
-            # API Anahtarı Secrets Üzerinden Çekiliyor
             client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
             response = client.models.generate_content(
                 model="gemini-2.5-flash",
@@ -85,3 +84,7 @@ if uploaded_file:
             st.write(response.text)
 else:
     st.info("Lütfen işlem yapabilmek için sol menüden bir PDF belgesi yükleyin.")
+
+# Orijinal İmza (Dipnot)
+st.markdown("---")
+st.caption("Made by Serd@R T.")
