@@ -2,6 +2,7 @@ import os
 import glob
 import sqlite3
 import re
+import numpy as np
 import streamlit as st
 from google import genai
 from pypdf import PdfReader
@@ -163,20 +164,13 @@ with st.expander("🔍 PDF Metin Okuma Kontrolü (Debug)"):
                 st.markdown(f"**{sayfa_no}. Sayfadan Çekilen Toplam Karakter Sayısı:** {len(ham_metin)}")
                 st.text_area(
                     "Kütüphanenin Okuduğu Ham Metin (Aynen bu şekilde Gemini'ye gidiyor):", 
-                    value=ham_metin if ham_metin else "⚠️ Bu sayfadan HİÇ METİN ÇEKİLEM EDİ! (Sayfa resim veya korumalı olabilir)", 
+                    value=ham_metin if ham_metin else "⚠️ Bu sayfadan HİÇ METİN ÇEKİLEMEDİ! (Sayfa resim veya korumalı olabilir)", 
                     height=250
                 )
             except Exception as e:
                 st.error(f"PDF okunurken hata oluştu: {e}")
     else:
         st.info("Sistemde incelenecek PDF bulunamadı.")
-
-def tr_lower(metin):
-    """Türkçe karakter destekli küçük harfe çevirme."""
-    duzeltmeler = {'İ': 'i', 'I': 'ı', 'Ş': 'ş', 'Ğ': 'ğ', 'Ü': 'ü', 'Ö': 'ö', 'Ç': 'ç'}
-    for k, v in duzeltmeler.items():
-        metin = metin.replace(k, v)
-    return metin.lower()
 
 @st.cache_data
 def pdf_paragraflari_cikar(pdf_listesi):
@@ -195,46 +189,59 @@ def pdf_paragraflari_cikar(pdf_listesi):
             continue
     return paragraflar
 
-def dinamik_baglam_limitleyici(soru, paragraflar, max_karakter=6000):
+# --- VEKTÖR VE ANLAMSAL ARAMA (EMBEDDING) FONKSİYONLARI ---
+@st.cache_data
+def get_embedding(text_list):
+    """Metin listesini Gemini Embedding API ile vektörlere dönüştürür."""
+    try:
+        response = client.models.embed_content(
+            model="text-embedding-004",
+            contents=text_list
+        )
+        return np.array([e.values for e in response.embeddings])
+    except Exception as e:
+        st.error(f"Embedding hatası: {e}")
+        return None
+
+def cosine_similarity(a, b):
+    """İki vektör kümesi arasındaki kosinüs benzerliğini hesaplar."""
+    return np.dot(a, b.T) / (np.linalg.norm(a, axis=1, keepdims=True) * np.linalg.norm(b, axis=1))
+
+def dinamik_baglam_limitleyici_v2(soru, paragraflar, max_karakter=8000):
     if not paragraflar:
         return ""
-        
-    stop_words = {"ve", "veya", "ile", "de", "da", "bu", "şu", "ne", "nasıl", "neden", "için", "bir", "mi", "mı"}
-    soru_temiz = tr_lower(soru)
-    soru_kelimeleri = [k for k in re.findall(r'\w+', soru_temiz) if k not in stop_words and len(k) > 1]
     
-    if not soru_kelimeleri:
-        soru_kelimeleri = [k for k in re.findall(r'\w+', soru_temiz) if len(k) > 1]
+    # 1. Paragrafların ve Sorunun Vektörlerini Al
+    paragraf_vektorleri = get_embedding(paragraflar)
+    soru_vektoru = get_embedding([soru])
+    
+    if paragraf_vektorleri is None or soru_vektoru is None:
+        return "\n\n---\n\n".join(paragraflar[:5])
 
-    skorlu_list = []
-    for p in paragraflar:
-        p_lower = tr_lower(p)
-        skor = 0
-        for k in soru_kelimeleri:
-            if k in p_lower:
-                skor += p_lower.count(k) * 2
-        if skor > 0:
-            skorlu_list.append((skor, p))
-            
-    skorlu_list.sort(key=lambda x: x[0], reverse=True)
+    # 2. Benzerlik Skorlarını Hesapla
+    skorlar = cosine_similarity(paragraf_vektorleri, soru_vektoru).flatten()
     
+    # 3. Paragrafları Skora Göre Sırala
+    skorlu_paragraflar = sorted(zip(skorlar, paragraflar), key=lambda x: x[0], reverse=True)
+    
+    # 4. Limit Belirleyerek En Alakalı Parçaları Seç
     secilen_parcalar = []
     toplam_uzunluk = 0
     
-    for skor, p in skorlu_list:
-        if toplam_uzunluk + len(p) <= max_karakter:
-            secilen_parcalar.append(p)
-            toplam_uzunluk += len(p)
-        else:
-            break
-            
-    if not secilen_parcalar:
-        for p in paragraflar:
+    # Eşik değer: Benzerlik skoru belirli bir seviyenin üzerinde olanları al
+    for skor, p in skorlu_paragraflar:
+        if skor > 0.30:
             if toplam_uzunluk + len(p) <= max_karakter:
                 secilen_parcalar.append(p)
                 toplam_uzunluk += len(p)
             else:
                 break
+
+    # Eğer eşiği geçen hiç paragraf yoksa en yüksek skora sahip ilk 2 paragrafı al
+    if not secilen_parcalar and skorlu_paragraflar:
+        secilen_parcalar = [skorlu_paragraflar[0][1]]
+        if len(skorlu_paragraflar) > 1:
+            secilen_parcalar.append(skorlu_paragraflar[1][1])
 
     return "\n\n---\n\n".join(secilen_parcalar)
 
@@ -265,7 +272,8 @@ if kullanici_sorusu := st.chat_input("Ne öğrenmek istiyorsun?"):
     st.session_state.messages.append({"role": "user", "content": kullanici_sorusu})
     save_message("user", kullanici_sorusu)
 
-    baglam = dinamik_baglam_limitleyici(kullanici_sorusu, paragraflar, max_karakter=6000)
+    # Vektör tabanlı dinamik bağlam limitleyici çalıştırılıyor
+    baglam = dinamik_baglam_limitleyici_v2(kullanici_sorusu, paragraflar, max_karakter=8000)
 
     prompt_metni = f"""
 Sen "Belge Asistanı  ✈️ " adında zeki bir asistansın.
@@ -289,7 +297,7 @@ KULLANICI SORUSU:
 """
 
     with st.chat_message("assistant"):
-        with st.spinner("Belgeler inceleniyor..."):
+        with st.spinner("Belgeler anlamsal olarak inceleniyor..."):
             try:
                 response = client.models.generate_content(
                     model='gemini-3.6-flash',
