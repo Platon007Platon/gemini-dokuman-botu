@@ -1,6 +1,7 @@
 import os
 import glob
 import sqlite3
+import re
 import streamlit as st
 from google import genai
 from pypdf import PdfReader
@@ -53,34 +54,31 @@ def clear_db():
 
 init_db()
 
-# --- CSS: YÖNETİCİ KUTUSU ---
+# --- CSS: YÖNETİCİ KUTUSU VE TASARIM ---
 st.markdown("""
     <style>
     .stAppDeployButton {display:none !important;}
     footer {visibility: hidden !important;}
     
     div[data-testid="stExpander"] {
-        position: absolute !important;
-        top: 10px !important;
-        right: 60px !important;
-        width: 240px !important;
-        z-index: 999999 !important;
+        position: relative !important;
+        margin-bottom: 10px !important;
         border: 1px solid #CBD5E1 !important;
         border-radius: 8px !important;
         background-color: #FFFFFF !important;
     }
 
     div[data-testid="stExpander"] summary {
-        padding: 4px 8px !important;
+        padding: 8px 12px !important;
         font-weight: 600 !important;
-        font-size: 0.9rem !important;
+        font-size: 0.95rem !important;
     }
     
     .big-title {
         font-size: 2.2rem !important;
         font-weight: 800;
         color: #0F172A;
-        margin-top: 40px;
+        margin-top: 20px;
         margin-bottom: 15px;
     }
     </style>
@@ -99,7 +97,7 @@ if not GEMINI_API_KEY:
 
 client = genai.Client(api_key=GEMINI_API_KEY)
 
-# --- PDF İŞLEME VE AKILLI PARÇALAMA ---
+# --- PDF LİSTESİ VE OTURUM YÖNETİMİ ---
 mevcut_pdfler = glob.glob("*.pdf")
 
 if "secili_pdfler" not in st.session_state:
@@ -148,50 +146,76 @@ with st.expander("🔒 Yönetici / PDF Seçimi"):
     elif girilen_sifre != "":
         st.error("Hatalı şifre!")
 
-# --- AKILLI VE HAFİF PDF PARÇALAYICI ---
+# --- PDF METİN OKUMA TEST PANELİ (DEBUG) ---
+with st.expander("🔍 PDF Metin Okuma Kontrolü (Debug)"):
+    if mevcut_pdfler:
+        secilen_test_pdf = st.selectbox("İncelemek istediğin PDF'i seç:", mevcut_pdfler)
+        if secilen_test_pdf:
+            try:
+                reader = PdfReader(secilen_test_pdf)
+                st.write(f"**Toplam Sayfa Sayısı:** {len(reader.pages)}")
+                
+                sayfa_no = st.number_input("Sayfa No Seç:", min_value=1, max_value=len(reader.pages), value=1)
+                
+                # Seçilen sayfadan çekilen ham metin
+                ham_metin = reader.pages[sayfa_no - 1].extract_text() or ""
+                
+                st.markdown(f"**{sayfa_no}. Sayfadan Çekilen Toplam Karakter Sayısı:** {len(ham_metin)}")
+                st.text_area(
+                    "Kütüphanenin Okuduğu Ham Metin (Aynen bu şekilde Gemini'ye gidiyor):", 
+                    value=ham_metin if ham_metin else "⚠️ Bu sayfadan HİÇ METİN ÇEKİLEM EDİ! (Sayfa resim veya korumalı olabilir)", 
+                    height=250
+                )
+            except Exception as e:
+                st.error(f"PDF okunurken hata oluştu: {e}")
+    else:
+        st.info("Sistemde incelenecek PDF bulunamadı.")
+
+def tr_lower(metin):
+    """Türkçe karakter destekli küçük harfe çevirme."""
+    duzeltmeler = {'İ': 'i', 'I': 'ı', 'Ş': 'ş', 'Ğ': 'ğ', 'Ü': 'ü', 'Ö': 'ö', 'Ç': 'ç'}
+    for k, v in duzeltmeler.items():
+        metin = metin.replace(k, v)
+    return metin.lower()
+
 @st.cache_data
 def pdf_paragraflari_cikar(pdf_listesi):
-    """PDF'leri satir ve paragraf yapisina gore anlamli parçalara boler."""
     paragraflar = []
     for pdf_yolu in pdf_listesi:
         try:
             reader = PdfReader(pdf_yolu)
             for page in reader.pages:
                 metin = page.extract_text() or ""
-                # Paragraf ve blok ayrışımı
-                bloklar = metin.split("\n\n")
+                bloklar = re.split(r'\n\s*\n', metin)
                 for b in bloklar:
-                    temiz_b = b.strip().replace("\n", " ")
-                    if len(temiz_b) > 30:  # Çok kısa anlamsız satırları süz
+                    temiz_b = re.sub(r'\s+', ' ', b).strip()
+                    if len(temiz_b) > 20:
                         paragraflar.append(temiz_b)
         except Exception:
             continue
     return paragraflar
 
-def dinamik_baglam_limitleyici(soru, paragraflar, max_karakter=4000):
-    """
-    Sorudaki anahtar kelimelere gore paragraflari skorlar.
-    Gemini'ye gidecek toplam metni kesinlikle max_karakter sinirinda tutar.
-    """
+def dinamik_baglam_limitleyici(soru, paragraflar, max_karakter=6000):
     if not paragraflar:
         return ""
         
-    # Önemsiz durak kelimeleri ayıkla
-    stop_words = {"ve", "veya", "ile", "de", "da", "bu", "şu", "ne", "nasıl", "neden", "için", "bir"}
-    soru_kelimeleri = [k.lower() for k in soru.split() if k.lower() not in stop_words and len(k) > 2]
+    stop_words = {"ve", "veya", "ile", "de", "da", "bu", "şu", "ne", "nasıl", "neden", "için", "bir", "mi", "mı"}
+    soru_temiz = tr_lower(soru)
+    soru_kelimeleri = [k for k in re.findall(r'\w+', soru_temiz) if k not in stop_words and len(k) > 1]
     
     if not soru_kelimeleri:
-        soru_kelimeleri = [k.lower() for k in soru.split() if len(k) > 2]
+        soru_kelimeleri = [k for k in re.findall(r'\w+', soru_temiz) if len(k) > 1]
 
     skorlu_list = []
     for p in paragraflar:
-        p_lower = p.lower()
-        # Kelime eşleşme skoru
-        skor = sum(p_lower.count(k) for k in soru_kelimeleri)
+        p_lower = tr_lower(p)
+        skor = 0
+        for k in soru_kelimeleri:
+            if k in p_lower:
+                skor += p_lower.count(k) * 2
         if skor > 0:
             skorlu_list.append((skor, p))
             
-    # Skora göre büyükten küçüğe sırala
     skorlu_list.sort(key=lambda x: x[0], reverse=True)
     
     secilen_parcalar = []
@@ -204,7 +228,6 @@ def dinamik_baglam_limitleyici(soru, paragraflar, max_karakter=4000):
         else:
             break
             
-    # Doğrudan kelime eşleşmediyse belgenin başından boyut kadar al
     if not secilen_parcalar:
         for p in paragraflar:
             if toplam_uzunluk + len(p) <= max_karakter:
@@ -242,8 +265,7 @@ if kullanici_sorusu := st.chat_input("Ne öğrenmek istiyorsun?"):
     st.session_state.messages.append({"role": "user", "content": kullanici_sorusu})
     save_message("user", kullanici_sorusu)
 
-    # Maksimum 4000 karakterlik kompakt bağlam oluşturulur
-    baglam = dinamik_baglam_limitleyici(kullanici_sorusu, paragraflar, max_karakter=4000)
+    baglam = dinamik_baglam_limitleyici(kullanici_sorusu, paragraflar, max_karakter=6000)
 
     prompt_metni = f"""
 Sen "Belge Asistanı  ✈️ " adında zeki bir asistansın.
@@ -254,7 +276,8 @@ Sistemdeki dosya isimlerini (örneğin ACC.pdf vb.) kesinlikle açıklama. Dosya
 TALİMATLAR:
 1. Sana verilen İLGİLİ DÖKÜMAN İÇERİĞİ'ni dikkatlice incele.
 2. Kullanıcının sorusuna detaylı, açıklayıcı ve kaliteli bir yanıt ver.
-3. Kullanıcının sorduğu soru verilen dökümanda HİÇ GEÇMİYORSA:
+3. Eğer metinde doğrudan yanıt varsa tam ve net bilgi ver.
+4. Kullanıcının sorduğu soru verilen dökümanda HİÇ GEÇMİYORSA:
    - İlk satıra TAM OLARAK şunu yaz: "Aradığınız bilgi dökümanda doğrudan bulunamadı."
    - Ardından dökümandaki en yakın konu hakkında bilgi ver.
 
@@ -268,7 +291,6 @@ KULLANICI SORUSU:
     with st.chat_message("assistant"):
         with st.spinner("Belgeler inceleniyor..."):
             try:
-                # Orijinal model tanımın korundu
                 response = client.models.generate_content(
                     model='gemini-3.6-flash',
                     contents=prompt_metni
