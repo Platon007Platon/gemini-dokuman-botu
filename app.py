@@ -149,30 +149,6 @@ with st.expander("🔒 Yönetici / PDF Seçimi"):
     elif girilen_sifre != "":
         st.error("Hatalı şifre!")
 
-# --- PDF METİN OKUMA TEST PANELİ (DEBUG) ---
-with st.expander("🔍 PDF Metin Okuma Kontrolü (Debug)"):
-    if mevcut_pdfler:
-        secilen_test_pdf = st.selectbox("İncelemek istediğin PDF'i seç:", mevcut_pdfler)
-        if secilen_test_pdf:
-            try:
-                reader = PdfReader(secilen_test_pdf)
-                st.write(f"**Toplam Sayfa Sayısı:** {len(reader.pages)}")
-               
-                sayfa_no = st.number_input("Sayfa No Seç:", min_value=1, max_value=len(reader.pages), value=1)
-               
-                ham_metin = reader.pages[sayfa_no - 1].extract_text() or ""
-               
-                st.markdown(f"**{sayfa_no}. Sayfadan Çekilen Toplam Karakter Sayısı:** {len(ham_metin)}")
-                st.text_area(
-                    "Kütüphanenin Okuduğu Ham Metin (Aynen bu şekilde Gemini'ye gidiyor):",
-                    value=ham_metin if ham_metin else "⚠️ Bu sayfadan HİÇ METİN ÇEKİLEMEDİ! (Sayfa resim veya korumalı olabilir)",
-                    height=250
-                )
-            except Exception as e:
-                st.error(f"PDF okunurken hata oluştu: {e}")
-    else:
-        st.info("Sistemde incelenecek PDF bulunamadı.")
-
 # --- GELİŞMİŞ PDF CHUNKING (SLIDING WINDOW) ---
 @st.cache_data
 def pdf_paragraflari_cikar(pdf_listesi, chunk_size=800, overlap=150):
