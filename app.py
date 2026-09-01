@@ -279,7 +279,7 @@ KULLANICI SORUSU:
         with st.spinner("Belgeler inceleniyor..."):
             try:
                 response = client.models.generate_content(
-                    model='gemini-3.6-flash',
+                    model='gemini-2.5-flash',
                     contents=prompt_metni
                 )
                 cevap = response.text
