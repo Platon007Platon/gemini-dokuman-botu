@@ -192,13 +192,24 @@ def pdf_paragraflari_cikar(pdf_listesi):
 # --- VEKTÖR VE ANLAMSAL ARAMA (EMBEDDING) FONKSİYONLARI ---
 @st.cache_data
 def get_embedding(text_list):
-    """Metin listesini Gemini Embedding API ile vektörlere dönüştürür."""
+    """Metin listesini 100'erli paketler halinde Gemini Embedding API ile vektörlere dönüştürür."""
+    if not text_list:
+        return None
+    
+    all_embeddings = []
+    chunk_size = 90  # Güvenli sınır: Her istekte en fazla 90 paragraf gönderilir
+
     try:
-        response = client.models.embed_content(
-            model="text-embedding-004",
-            contents=text_list
-        )
-        return np.array([e.values for e in response.embeddings])
+        for i in range(0, len(text_list), chunk_size):
+            chunk = text_list[i:i + chunk_size]
+            response = client.models.embed_content(
+                model="text-embedding-004",
+                contents=chunk
+            )
+            for e in response.embeddings:
+                all_embeddings.append(e.values)
+                
+        return np.array(all_embeddings)
     except Exception as e:
         st.error(f"Embedding hatası: {e}")
         return None
@@ -207,7 +218,7 @@ def cosine_similarity(a, b):
     """İki vektör kümesi arasındaki kosinüs benzerliğini hesaplar."""
     return np.dot(a, b.T) / (np.linalg.norm(a, axis=1, keepdims=True) * np.linalg.norm(b, axis=1))
 
-def dinamik_baglam_limitleyici_v2(soru, paragraflar, max_karakter=8000):
+def dinamik_baglam_limitleyici_v2(soru, paragraflar, max_karakter=12000):
     if not paragraflar:
         return ""
     
@@ -215,8 +226,9 @@ def dinamik_baglam_limitleyici_v2(soru, paragraflar, max_karakter=8000):
     paragraf_vektorleri = get_embedding(paragraflar)
     soru_vektoru = get_embedding([soru])
     
-    if paragraf_vektorleri is None or soru_vektoru is None:
-        return "\n\n---\n\n".join(paragraflar[:5])
+    # Eğer embedding başarısız olursa boş dönme, en azından ilk paragrafları gönder
+    if paragraf_vektorleri is None or soru_vektoru is None or len(paragraf_vektorleri) != len(paragraflar):
+        return "\n\n---\n\n".join(paragraflar[:10])
 
     # 2. Benzerlik Skorlarını Hesapla
     skorlar = cosine_similarity(paragraf_vektorleri, soru_vektoru).flatten()
@@ -224,24 +236,20 @@ def dinamik_baglam_limitleyici_v2(soru, paragraflar, max_karakter=8000):
     # 3. Paragrafları Skora Göre Sırala
     skorlu_paragraflar = sorted(zip(skorlar, paragraflar), key=lambda x: x[0], reverse=True)
     
-    # 4. Limit Belirleyerek En Alakalı Parçaları Seç
+    # 4. En Yüksek Skora Sahip Parçaları Seç
     secilen_parcalar = []
     toplam_uzunluk = 0
     
-    # Eşik değer: Benzerlik skoru belirli bir seviyenin üzerinde olanları al
+    # En alakalı ilk 8 paragrafı veya karakter sınırına kadar olanı al
     for skor, p in skorlu_paragraflar:
-        if skor > 0.30:
-            if toplam_uzunluk + len(p) <= max_karakter:
-                secilen_parcalar.append(p)
-                toplam_uzunluk += len(p)
-            else:
-                break
+        if toplam_uzunluk + len(p) <= max_karakter:
+            secilen_parcalar.append(p)
+            toplam_uzunluk += len(p)
+        if len(secilen_parcalar) >= 8:
+            break
 
-    # Eğer eşiği geçen hiç paragraf yoksa en yüksek skora sahip ilk 2 paragrafı al
     if not secilen_parcalar and skorlu_paragraflar:
-        secilen_parcalar = [skorlu_paragraflar[0][1]]
-        if len(skorlu_paragraflar) > 1:
-            secilen_parcalar.append(skorlu_paragraflar[1][1])
+        secilen_parcalar = [p for _, p in skorlu_paragraflar[:3]]
 
     return "\n\n---\n\n".join(secilen_parcalar)
 
