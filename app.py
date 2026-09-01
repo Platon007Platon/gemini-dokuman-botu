@@ -11,7 +11,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 # --- 1. SAYFA VE MENÜ AYARLARI ---
 st.set_page_config(
-    page_title="Belge Asistanı  ✈️ ", 
+    page_title="Belge Asistanı  ✈️ ",
     page_icon="✈️ ",
     layout="centered"
 )
@@ -62,7 +62,7 @@ st.markdown("""
     <style>
     .stAppDeployButton {display:none !important;}
     footer {visibility: hidden !important;}
-    
+   
     div[data-testid="stExpander"] {
         position: relative !important;
         margin-bottom: 10px !important;
@@ -76,7 +76,7 @@ st.markdown("""
         font-weight: 600 !important;
         font-size: 0.95rem !important;
     }
-    
+   
     .big-title {
         font-size: 2.2rem !important;
         font-weight: 800;
@@ -111,10 +111,10 @@ ADMIN_SIFRE = "13579S"
 
 with st.expander("🔒 Yönetici / PDF Seçimi"):
     girilen_sifre = st.text_input("Şifre", type="password")
-    
+   
     if girilen_sifre == ADMIN_SIFRE:
         st.success("Giriş başarılı!")
-        
+       
         yuklenen_dosya = st.file_uploader("Yeni PDF ekle", type=["pdf"])
         if yuklenen_dosya:
             dosya_adi = yuklenen_dosya.name
@@ -128,13 +128,13 @@ with st.expander("🔒 Yönetici / PDF Seçimi"):
 
         st.divider()
         st.markdown("**Aktif Edilecek Belgeleri Seç:**")
-        
+       
         secilen_liste = []
         for pdf in mevcut_pdfler:
             varsayilan = pdf in st.session_state.secili_pdfler
             if st.checkbox(pdf, value=varsayilan, key=f"chk_{pdf}"):
                 secilen_liste.append(pdf)
-                
+               
         if secilen_liste != st.session_state.secili_pdfler:
             st.session_state.secili_pdfler = secilen_liste
             st.cache_data.clear()
@@ -157,15 +157,15 @@ with st.expander("🔍 PDF Metin Okuma Kontrolü (Debug)"):
             try:
                 reader = PdfReader(secilen_test_pdf)
                 st.write(f"**Toplam Sayfa Sayısı:** {len(reader.pages)}")
-                
+               
                 sayfa_no = st.number_input("Sayfa No Seç:", min_value=1, max_value=len(reader.pages), value=1)
-                
+               
                 ham_metin = reader.pages[sayfa_no - 1].extract_text() or ""
-                
+               
                 st.markdown(f"**{sayfa_no}. Sayfadan Çekilen Toplam Karakter Sayısı:** {len(ham_metin)}")
                 st.text_area(
-                    "Kütüphanenin Okuduğu Ham Metin (Aynen bu şekilde Gemini'ye gidiyor):", 
-                    value=ham_metin if ham_metin else "⚠️ Bu sayfadan HİÇ METİN ÇEKİLEMEDİ! (Sayfa resim veya korumalı olabilir)", 
+                    "Kütüphanenin Okuduğu Ham Metin (Aynen bu şekilde Gemini'ye gidiyor):",
+                    value=ham_metin if ham_metin else "⚠️ Bu sayfadan HİÇ METİN ÇEKİLEMEDİ! (Sayfa resim veya korumalı olabilir)",
                     height=250
                 )
             except Exception as e:
@@ -173,42 +173,66 @@ with st.expander("🔍 PDF Metin Okuma Kontrolü (Debug)"):
     else:
         st.info("Sistemde incelenecek PDF bulunamadı.")
 
+# --- GELİŞMİŞ PDF CHUNKING (SLIDING WINDOW) ---
 @st.cache_data
-def pdf_paragraflari_cikar(pdf_listesi):
+def pdf_paragraflari_cikar(pdf_listesi, chunk_size=800, overlap=150):
     paragraflar = []
     for pdf_yolu in pdf_listesi:
         try:
             reader = PdfReader(pdf_yolu)
+            tum_pdf_metni = ""
             for page in reader.pages:
                 metin = page.extract_text() or ""
-                bloklar = re.split(r'\n\s*\n', metin)
-                for b in bloklar:
-                    temiz_b = re.sub(r'\s+', ' ', b).strip()
-                    if len(temiz_b) > 20:
-                        paragraflar.append(temiz_b)
+                temiz_metin = re.sub(r'\s+', ' ', metin).strip()
+                if temiz_metin:
+                    tum_pdf_metni += temiz_metin + " "
+            
+            i = 0
+            while i < len(tum_pdf_metni):
+                chunk = tum_pdf_metni[i:i + chunk_size]
+                if len(chunk.strip()) > 30:
+                    paragraflar.append(chunk.strip())
+                i += (chunk_size - overlap)
         except Exception:
             continue
     return paragraflar
 
-# --- ARAMA MOTORU (TF-IDF - HATASIZ VE YEREL ANLAMSAL ARAMA) ---
+# --- SORGU GENİŞLETME (QUERY EXPANSION) ---
+def sorgu_genislet_havacilik(soru_metni):
+    try:
+        expansion_prompt = f"""Kullanıcının şu sorusundaki havacılık/ATC terimlerini İngilizce teknik karşılıklarıyla genişlet: "{soru_metni}"
+Sadece arama terimleri döndür. Örnek: "radar kaybı sofya" -> "radar kaybı sofya radar failure loss of radar separation Sofia ACC"
+Genişletilmiş Arama Metni:"""
+        
+        res = client.models.generate_content(
+            model='gemini-3.6-flash',
+            contents=expansion_prompt
+        )
+        return f"{soru_metni} {res.text.strip()}"
+    except Exception:
+        return soru_metni
+
+# --- ARAMA MOTORU (TF-IDF - GELİŞTİRİLMİŞ MİMARİ) ---
 def dinamik_baglam_tfidf(soru, paragraflar, max_karakter=15000):
     if not paragraflar:
         return ""
-    
+   
     try:
-        tum_metinler = paragraflar + [soru]
-        vectorizer = TfidfVectorizer(ngram_range=(1, 2)).fit_transform(tum_metinler)
-        vectors = vectorizer.toarray()
+        genisletilmis_soru = sorgu_genislet_havacilik(soru)
         
+        tum_metinler = paragraflar + [genisletilmis_soru]
+        vectorizer = TfidfVectorizer(ngram_range=(1, 2), stop_words=None).fit_transform(tum_metinler)
+        vectors = vectorizer.toarray()
+       
         paragraf_vektorleri = vectors[:-1]
         soru_vektoru = vectors[-1:]
-        
+       
         skorlar = cosine_similarity(paragraf_vektorleri, soru_vektoru).flatten()
         skorlu_paragraflar = sorted(zip(skorlar, paragraflar), key=lambda x: x[0], reverse=True)
-        
+       
         secilen_parcalar = []
         toplam_uzunluk = 0
-        
+       
         for skor, p in skorlu_paragraflar:
             if skor > 0:
                 if toplam_uzunluk + len(p) <= max_karakter:
@@ -216,7 +240,7 @@ def dinamik_baglam_tfidf(soru, paragraflar, max_karakter=15000):
                     toplam_uzunluk += len(p)
                 if len(secilen_parcalar) >= 12:
                     break
-                    
+                   
         if not secilen_parcalar and skorlu_paragraflar:
             secilen_parcalar = [p for _, p in skorlu_paragraflar[:5]]
 
@@ -246,12 +270,11 @@ st.caption("Made by Serd@R T.")
 
 # --- SOHBET İŞLEMLERİ ---
 if kullanici_sorusu := st.chat_input("Ne öğrenmek istiyorsun?"):
-    
+   
     st.chat_message("user").markdown(kullanici_sorusu)
     st.session_state.messages.append({"role": "user", "content": kullanici_sorusu})
     save_message("user", kullanici_sorusu)
 
-    # TF-IDF tabanlı bağlam limitleyici çalıştırılıyor
     baglam = dinamik_baglam_tfidf(kullanici_sorusu, paragraflar, max_karakter=15000)
 
     prompt_metni = f"""
@@ -261,7 +284,7 @@ GİZLİLİK KURALI:
 Sistemdeki dosya isimlerini (örneğin ACC.pdf vb.) kesinlikle açıklama. Dosya ismi sorulursa "Güvenlik nedeniyle dosya bilgilerini paylaşamıyorum." de.
 
 TALİMATLAR:
-1. Sana verilen İLGİLİ DÖKÜMAN İÇERİĞİ'ni dikkatlice incele.
+1. Sana verilen İLGİLİ DÖKÜMAN İÇERİĞİ'ni dikkatlice incele. İçerik Türkçe veya İngilizce olabilir, kural ve sayıları buna göre değerlendir.
 2. Kullanıcının sorusuna detaylı, açıklayıcı ve kaliteli bir yanıt ver.
 3. Eğer metinde doğrudan yanıt varsa tam ve net bilgi ver.
 4. Kullanıcının sorduğu soru verilen dökümanda HİÇ GEÇMİYORSA:
@@ -279,7 +302,7 @@ KULLANICI SORUSU:
         with st.spinner("Belgeler inceleniyor..."):
             try:
                 response = client.models.generate_content(
-                    model='gemini-2.5-flash',
+                    model='gemini-3.6-flash',
                     contents=prompt_metni
                 )
                 cevap = response.text
