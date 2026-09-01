@@ -6,6 +6,8 @@ import numpy as np
 import streamlit as st
 from google import genai
 from pypdf import PdfReader
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 
 # --- 1. SAYFA VE MENÜ AYARLARI ---
 st.set_page_config(
@@ -158,7 +160,6 @@ with st.expander("🔍 PDF Metin Okuma Kontrolü (Debug)"):
                 
                 sayfa_no = st.number_input("Sayfa No Seç:", min_value=1, max_value=len(reader.pages), value=1)
                 
-                # Seçilen sayfadan çekilen ham metin
                 ham_metin = reader.pages[sayfa_no - 1].extract_text() or ""
                 
                 st.markdown(f"**{sayfa_no}. Sayfadan Çekilen Toplam Karakter Sayısı:** {len(ham_metin)}")
@@ -189,69 +190,39 @@ def pdf_paragraflari_cikar(pdf_listesi):
             continue
     return paragraflar
 
-# --- VEKTÖR VE ANLAMSAL ARAMA (EMBEDDING) FONKSİYONLARI ---
-@st.cache_data
-def get_embedding(text_list):
-    """Metin listesini 100'erli paketler halinde Gemini Embedding API ile vektörlere dönüştürür."""
-    if not text_list:
-        return None
-    
-    all_embeddings = []
-    chunk_size = 90  # Güvenli sınır: Her istekte en fazla 90 paragraf gönderilir
-
-    try:
-        for i in range(0, len(text_list), chunk_size):
-            chunk = text_list[i:i + chunk_size]
-            response = client.models.embed_content(
-                model="text-embedding-004",
-                contents=chunk
-            )
-            for e in response.embeddings:
-                all_embeddings.append(e.values)
-                
-        return np.array(all_embeddings)
-    except Exception as e:
-        st.error(f"Embedding hatası: {e}")
-        return None
-
-def cosine_similarity(a, b):
-    """İki vektör kümesi arasındaki kosinüs benzerliğini hesaplar."""
-    return np.dot(a, b.T) / (np.linalg.norm(a, axis=1, keepdims=True) * np.linalg.norm(b, axis=1))
-
-def dinamik_baglam_limitleyici_v2(soru, paragraflar, max_karakter=12000):
+# --- ARAMA MOTORU (TF-IDF - HATASIZ VE YEREL ANLAMSAL ARAMA) ---
+def dinamik_baglam_tfidf(soru, paragraflar, max_karakter=15000):
     if not paragraflar:
         return ""
     
-    # 1. Paragrafların ve Sorunun Vektörlerini Al
-    paragraf_vektorleri = get_embedding(paragraflar)
-    soru_vektoru = get_embedding([soru])
-    
-    # Eğer embedding başarısız olursa boş dönme, en azından ilk paragrafları gönder
-    if paragraf_vektorleri is None or soru_vektoru is None or len(paragraf_vektorleri) != len(paragraflar):
-        return "\n\n---\n\n".join(paragraflar[:10])
+    try:
+        tum_metinler = paragraflar + [soru]
+        vectorizer = TfidfVectorizer(ngram_range=(1, 2)).fit_transform(tum_metinler)
+        vectors = vectorizer.toarray()
+        
+        paragraf_vektorleri = vectors[:-1]
+        soru_vektoru = vectors[-1:]
+        
+        skorlar = cosine_similarity(paragraf_vektorleri, soru_vektoru).flatten()
+        skorlu_paragraflar = sorted(zip(skorlar, paragraflar), key=lambda x: x[0], reverse=True)
+        
+        secilen_parcalar = []
+        toplam_uzunluk = 0
+        
+        for skor, p in skorlu_paragraflar:
+            if skor > 0:
+                if toplam_uzunluk + len(p) <= max_karakter:
+                    secilen_parcalar.append(p)
+                    toplam_uzunluk += len(p)
+                if len(secilen_parcalar) >= 12:
+                    break
+                    
+        if not secilen_parcalar and skorlu_paragraflar:
+            secilen_parcalar = [p for _, p in skorlu_paragraflar[:5]]
 
-    # 2. Benzerlik Skorlarını Hesapla
-    skorlar = cosine_similarity(paragraf_vektorleri, soru_vektoru).flatten()
-    
-    # 3. Paragrafları Skora Göre Sırala
-    skorlu_paragraflar = sorted(zip(skorlar, paragraflar), key=lambda x: x[0], reverse=True)
-    
-    # 4. En Yüksek Skora Sahip Parçaları Seç
-    secilen_parcalar = []
-    toplam_uzunluk = 0
-    
-    # En alakalı ilk 8 paragrafı veya karakter sınırına kadar olanı al
-    for skor, p in skorlu_paragraflar:
-        if toplam_uzunluk + len(p) <= max_karakter:
-            secilen_parcalar.append(p)
-            toplam_uzunluk += len(p)
-        if len(secilen_parcalar) >= 8:
-            break
-
-    if not secilen_parcalar and skorlu_paragraflar:
-        secilen_parcalar = [p for _, p in skorlu_paragraflar[:3]]
-
-    return "\n\n---\n\n".join(secilen_parcalar)
+        return "\n\n---\n\n".join(secilen_parcalar)
+    except Exception as e:
+        return "\n\n---\n\n".join(paragraflar[:8])
 
 # --- BAŞLIK VE PDF YÜKLEME ---
 st.markdown('<div class="big-title">Belge Asistanı  ✈️ </div>', unsafe_allow_html=True)
@@ -280,8 +251,8 @@ if kullanici_sorusu := st.chat_input("Ne öğrenmek istiyorsun?"):
     st.session_state.messages.append({"role": "user", "content": kullanici_sorusu})
     save_message("user", kullanici_sorusu)
 
-    # Vektör tabanlı dinamik bağlam limitleyici çalıştırılıyor
-    baglam = dinamik_baglam_limitleyici_v2(kullanici_sorusu, paragraflar, max_karakter=8000)
+    # TF-IDF tabanlı bağlam limitleyici çalıştırılıyor
+    baglam = dinamik_baglam_tfidf(kullanici_sorusu, paragraflar, max_karakter=15000)
 
     prompt_metni = f"""
 Sen "Belge Asistanı  ✈️ " adında zeki bir asistansın.
@@ -305,7 +276,7 @@ KULLANICI SORUSU:
 """
 
     with st.chat_message("assistant"):
-        with st.spinner("Belgeler anlamsal olarak inceleniyor..."):
+        with st.spinner("Belgeler inceleniyor..."):
             try:
                 response = client.models.generate_content(
                     model='gemini-3.6-flash',
