@@ -1,0 +1,265 @@
+
+--- SAYFA 1 (ACC-ÇAYCUMA TWR 2015 (1).pdf) ---
+ANLAŞMA MEKTUBU
+
+ANKARA ACC ve ÇAYCUMA TWR arasında
+
+Geçerlilik: 14.09.2015 – 00.01 UTC
+
+**1 Genel :**
+
+**1.1 Amaç.**
+Bu anlaşma mektubunun amacı ANKARA ACC ile ÇAYCUMA TWR arasında Genel Hava Trafik (IFR / VFR) ve Operasyonel Hava trafiğine ATS sağlanırken uygulanacak koordinasyon yöntemlerini tanımlamaktır. Bu yöntemler, ICAO ve Eurocontrol ve / veya Ulusal belgelerde belirtilmiş olanlara ilavedir.
+
+**1.2 Operasyonel Durum**
+Her iki ATS ünitesi de bu anlaşma mektubunda belirtilen uygulamaları etkileyebilecek, kolaylıklar ve seyrüsefer yardımcılarının operasyonel durumundaki herhangi bir değişiklikten birbirlerini haberdar edeceklerdir.
+
+**1.3 Genel Hava Trafik ve Operasyonel Hava Trafiğinin Tanımlanması**
+
+**1.3.1 Genel Hava Trafik (GAT)**
+“ICAO kuralları ve koşullarına göre yapılan uçuşlar”
+
+**1.3.2 Operasyonel Hava Trafik (OAT)**
+“GAT için belirlenmiş koşullara uymayan kuralları ve uygulamaları uygun otorite tarafından konulmuş uçuşlar.”
+
+**2 Sorumluluk:**
+Bu anlaşma mektubu ile saptanmış hükümlerin yerine getirilmesinden Ankara ACC ve Çaycuma TWR sorumludur.
+
+**3 Sorumluluk sahaları :**
+
+**3.1 Sorumluluk sahaları:**
+Birimlerin yatay ve dikey sorumluluk sahaları şu şekildedir:
+
+**3.1.1 Ankara ACC:**
+Yatay limitleri: Türkiye Cumhuriyeti AIP’sinde yayımlandığı gibi. (ENR 2-1)
+Dikey limitleri: GND – UNL
+
+**3.1.2 Çaycuma TWR:**
+Yatay limitleri: Türkiye Cumhuriyeti AIP’ sinde yayımlandığı gibi (AD2 LTAS–7)
+Dikey limitleri: FL150 / SFC
+
+**4 Tanımlar ve Kısaltmalar :**
+
+**4.1 Sorumluluk Sahası :**
+Tek bir ATS ünitesinin hava trafik servisinin sağlamakla sorumlu olduğu boyutları belirli hava sahasıdır.
+
+Ankara ACC ve Çaycuma TWR arasındaki LoA-14.09.2015 Sayfa:1/6
+
+--- SAYFA 2 (ACC-ÇAYCUMA TWR 2015 (1).pdf) ---
+4.1.1 Approval Request :
+Bir ATS ünitesinin diğer bir ATS ünitesinden uçuş süresi, transferin devredileceği kontrol noktasına kararlaştırılmış minimum zamandan daha az olan henüz havalanmamış bir uçak için veya karşılıklı kararlaştırılmış uygulamalarda tanımlanmış durumların dışında uçmak isteyen uçuş halindeki bir uçağın onayı ile ilgili taleptir.
+
+4.1.2 Expedite Clearance :
+Bir ATS ünitesinin diğer bir ATS ünitesinden uçuş süresi, transferin devredileceği kontrol noktasına kararlaştırılmış minimum önceden bildirme zamanından daha az olan uçuştaki bir uçak ile ilgili acele klerans talebidir.
+
+4.1.3 Tırmanma Müsaadesi:
+Belirli bir uçağın kontrolün devredildiği noktadan önce tırmanması için kontrolü devralacak ünite tarafından verilecek müsaadedir.
+Not: Kontrolü devredecek ünite aksi kararlaştırılmadığı sürece kendi sorumluluk sahası içinde ayırma dan sorumlu kalmaya devam eder.
+
+4.1.4 Alçalma Müsaadesi:
+Belirli bir uçağın kontrolün devredildiği noktadan önce alçaltılması için kontrolü devreden üniteye verdiği müsaadedir.
+Not: Kontrolü devredecek ünite aksi kararlaştırılmadığı sürece kendi sorumluluk sahası içinde ayırma dan sorumlu kalmaya devam eder.
+
+4.2 Kısaltmalar :
+
+| Kısaltma | Açıklama |
+| :--- | :--- |
+| AIP | Aeronautical Information Publication |
+| AMSL | Above Mean Sea Level |
+| AoR* | Area of Responsibility |
+| ATC | Air Traffic Control |
+| ATS | Air Traffic Services |
+| COP* | Co-ordination Point |
+| ETO | Estimated Time Over Significant Point |
+| ENR | En-Route |
+| FD | Flight Data |
+| FDPS* | Flight Data Processing System |
+| FIR | Flight Information Region |
+| FMP* | Flow Management Position |
+| GAT* | General Air Traffic |
+| IAS | Indicated Air Speed |
+| ICAO | International Civil Aviation Organisation |
+| IFR | Instrument Flight Rules |
+| LoA* | Letter of Agreement |
+| MFC* | Multi Frequency Coding (telephone system) |
+| NM | Nautical Mile |
+| OAT* | Operational Air Traffic |
+| ORCAM | Originating Region Code Assignment Method |
+| REV | Revision Message |
+| RTF | Radio Telephony |
+| RVSM | Reduced Vertical Separation Minimum |
+| SSR | Secondary Surveillance Radar |
+| VFR | Visual Flight Rules |
+
+Not: (*) işaretli kısaltmalar non-ICAO kısaltmalardır.
+
+Ankara ACC ve Çaycuma TWR arasındaki LoA-14.09.2015
+
+Sayfa:2/6
+
+TOPLAM SATIR SAYISI: 26
+
+--- SAYFA 3 (ACC-ÇAYCUMA TWR 2015 (1).pdf) ---
+5 Koordinasyon Usulleri:
+
+5.1 Çaycuma’dan kalkacak trafikler için usuller:
+
+5.1.1 Çaycuma kule uçağın planında belirttiği muhtemel kalkış zamanından en geç 30 dakika önce Ankara ACC’yi Akıncı Yaklaşma ile Koordine etmesi için bilgilendirecek ve ANK ACC’den, en erken 20 en geç 5 dakika önce , kalkacak trafik için ATC müsaadesi alacaktır. Şayet uçuş planı ACC’de mevcut değilse uçuş plan özetini yazdıracaktır.
+
+5.1.1.1 Plan özeti aşağıdaki bilgileri içerecek.
+a) Uçak çağrı adı
+b) Tipi
+c) Muhtemel kalkış zamanı
+d) İstenilen seviye veya seviyeler
+e) Uçuş yolu veya yolları
+f) Gideceği meydan
+g) RVSM statüsü
+
+5.1.2 Kullanılan piste bakılmaksızın ACC tarafından aksi bildirilmedikçe motor çalıştırma yetkisi Çaycuma Kule’de olacaktır.
+
+5.1.3 ATC Müsaadeleri tahmini kalkış saatinden itibaren 15 dakikalık süre içerisinde geçerliliğini koruyacak bu süreyi aşan gecikmelerde Çaycuma kule yeni bir ATC müsaadesi talep edecektir.
+
+5.1.4 Çaycuma kule trafiğin kalkışını müteakip en kısa sürede kalkış ve sonraki fix tahminini ANK-ACC’ye bildirecektir.
+
+5.1.5 Çaycuma Kule kalkacak uçaklar arasında Doküman 4444 ATM 501 CHAPTER 7 madde 7.8.2’ de yer alan kalkış ayırmaları ile CHAPTER 5 Madde 5.8.3’de yer alan Wake Turbulence ayırma minimumlarının altına inmeyecektir.
+
+5.1.6 Çaycuma’dan kalkacak VFR trafikler kulenin sorumluluk sahası olan CTR’ı terk edecek ise transponder kode kullanılması ile ilgili olan AIP hükmü ENR 1.6-5 Madde 6.1 ‘de belirtilen şartları yerine getireceklerdir.
+
+5.2 Çaycuma meydanına inecek trafikler için usuller:
+
+5.2.1 Trafiğe ait bilgi Çaycuma tahmini varışından en geç 20 dakika önce verilmelidir. Bu sürenin altında kalmayı gerektirecek durumlarda birimler arası mutabakat şarttır. Trafik bilgisini alan Çaycuma kule zaman geçirmeden meydan hava durumu, kullanılan pist ve alçalma turunu ANK-ACC’ ye bildirecektir.
+
+5.2.2 Bir geliş malumatı aşağıdaki bilgileri içerecektir.
+a) Uçak çağrı adı
+b) Tipi
+c) Uçuş seviyesi veya alçalacağı seviye
+d) Fix tahminini
+e) Kalkış Meydanı
+
+5.2.3 ANK-ACC uçağa alçalacağı seviyeyi, yapacağı alçalma türünü, kullanılan pisti, meydan altimetresini, rüyet ve gerektirdiği durumlarda uçağa muhtemel yaklaşma zamanını verecektir.
+
+Ankara ACC ve Çaycuma TWR arasındaki LoA-14.09.2015
+Sayfa:3/6
+
+--- SAYFA 4 (ACC-ÇAYCUMA TWR 2015 (1).pdf) ---
+5.2.4 Çaycuma kule tarafından aksi bildirilmedikçe ANK-ACC iniş trafiklerini yol minimasına kadar alçaltabilir.
+
+5.2.5 Çaycuma kule meydanda oluşan önemli meteorolojik olayları veya hava trafiğinin akışına etki edecek diğer olayları zaman geçirmeden ANK-ACC'ye bildirecektir.
+
+5.2.6 Çaycuma CTR’ı FL150 dahil altında kat edecek trafiklerin bilgisi sözlü estimate olarak Çaycuma TWR’ye verilecektir.
+
+**6 Değişiklikler:**
+Uçuş verileri ile ilgili önemli değişiklikler kabul eden ATC ünitesine aktarılacaktır. **3 (üç)** dakikayı aşan farklılıkların bilgisi iletilmelidir.
+
+**7 Yer / Yer Muhaberesinin Gayri faal Olması Durumu :**
+
+7.1 Fall-Back Durumunda Koordinasyon Usulleri:
+Tarafların karşılıklı koordine için direkt konuşma hatlarını kullanması gerektiğinde, bu hatların kesilmesi durumunda koordinasyon aşağıdaki yollarla sağlanabilir.
+
+A- Ünitelerde bulunan şehirlerarası telefon hatları ile
+Ankara ACC:
+ACC Supervisor Tel : 0.312.5905500
+Tel : 0.312.5905501
+Fax : 0.312.8271061
+FMP : 0.312.5905511
+
+Çaycuma TWR:
+TWR Supervisor Tel : 0.372.6182457 / 152
+Fax : 0.372.6182454
+
+B- AFTN
+Ankara ACC:
+ACC supervisor LTAAZRZX
+LTAAZQZX
+
+Çaycuma TWR:
+TWR supervisor LTASZGZX
+
+7.2 Fall-Back Durumunda Alternatif Koordinasyon Usulleri:
+
+7.2.1 Çaycuma meydanından kalkacak trafikler için:
+
+7.2.1.1 Çaycuma’dan kalkışı müteakip Çaycuma VOR / NDB üzerinde maksimum FL 150 tırmanarak ANK-ACC ile ATC müsaadesi için temas kurmaya çalışacak temas kurar ise bu durumu Çaycuma kuleye aktaracak. Şayet temas mümkün olmaz ise tekrar Çaycuma meydanına innecek
+
+7.2.2 Çaycuma meydanına inecek trafikler için:
+
+7.2.2.1 ANK-ACC tarafından uçakların en kısa zamanda Çaycuma kule ile teması sağlanacak. Uçak maksimum FL160’a alçaltılıp Çaycuma VOR/NDB üzerine müsaade edilip Çaycuma kule ile temas ettirilmeye çalışılacak, temas etmesi durumunda bu malumatı ANK-ACC’ye bildirecek ve Çaycuma kule ile tekrar temas ederek alçalma ve yaklaşma müsaadesini Çaycuma kuleden alacaktır. Uçak Çaycuma kule ile temas edememesi durumunda ANK-ACC ile tekrar temas ederek yedek meydanına dönüş için ATC müsaadesi alacaktır.
+
+Ankara ACC ve Çaycuma TWR arasındaki LoA-14.09.2015
+Sayfa: 4/6
+
+--- SAYFA 5 (ACC-ÇAYCUMA TWR 2015 (1).pdf) ---
+**8. VFR Uçuşlar :**
+
+8.1 VFR Uçuş Uygulamaları:
+8.1.1 VFR Uçuşlarla ilgili karşılıklı bilgi alış-verişi aşağıdaki gibi uygulanacaktır.
+a) Çağrı adı, kalkış ve varış meydanları, uçak tipi varsa SSR kodu
+c) Rotası ve uçuş seviyesi (irtifa)
+d) CTR kesiş tahminini
+e) Bir sonraki noktaya tahmini varışi.
+f) Varsa gerekli olan diğer bilgiler.
+
+**9. Transit Trafiklerin Koordinasyonu :**
+
+9.1 Çaycuma CTR’ı FL 150 dâhil altında kat edecek transit trafiklerin bilgisi sözlü estimate olarak Çaycuma TWR’a verilecektir
+
+**10. Kontrolün ve Muhaberenin devri:**
+
+10.1 Aksi bildirilmedikçe kontrol ve muhaberenin devri kontrol sahası sınırında yapılacaktır. Ancak frekans sorunundan dolayı muhaberenin devri tarafların mutabık kaldığı mesafe veya seviyede olabilir. Çaycuma Kule kontrol sahası (CTR) dışında temas halinde bulunduğu uçağa, ANK-ACC'den almış olduğu ATC müsaadesi dışında uçağa farklı bir müsaade ve manevra vermeyecek gerekli olduğu durumlarda ANK-ACC'den müsaade alacaktır. Çaycuma CTR dışındaki bütün ayırmalar ANK-ACC'ye aittir.
+
+10.1.1 Muhaberenin devrinde taraflar tarafından aksi bildirilmedikçe aşağıdaki frekanslar kullanılacaktır.
+
+| Ankara ACC: | |
+| :--- | :--- |
+| West Lower Sektörü | 128.800 MHz |
+| | 120.600 MHz |
+| | 362.300 MHz |
+
+---
+
+| Çaycuma TWR : | |
+| :--- | :--- |
+| | 119.550 MHz |
+| | 123.700 MHz |
+| | 241.725 MHz |
+| | 121.500 MHz |
+
+**11. SSR Kod Tahsisi :**
+
+11.1 Çaycuma TWR CTR'nın dışına çıkacak tüm uçuşlar için ANK ACC'den SSR KOD tahsisi isteyecektir.
+11.1.1 Pilot tarafından Transponder ile ilgili bir arıza bildirildiğinde, bu durum zaman geçirilmeden Ankara ACC'ye bildirilecektir.
+
+**12. Değişiklikler :**
+
+12.1 Anlaşma Mektubu Değişikliği.
+Bu Anlaşma Mektubunun değişikliği, imza sahibi otoritenin karşılıklı izin vermelerini gerektirir.
+
+Ankara ACC ve Çaycuma TWR arasındaki LoA-14.09.2015 Sayfa:5/6
+
+---
+TOPLAM SATIR SAYISI: Tablo 1 için 3 satır, Tablo 2 için 4 satır.
+
+--- SAYFA 6 (ACC-ÇAYCUMA TWR 2015 (1).pdf) ---
+13 Yorumlama ve Anlaşmazlıklarda Uzlaşma :
+
+13.1 Geçerli anlaşma mektubunun herhangi bir şartını yorumlamada veya uygulanmasında anlaşmazlıklar çıkması gibi bir durumda şüpheler veya farklı görüşler varsa taraflar her iki tarafın da kabul edebileceği bir sonuca varmak için çalışacaktır. Bir sonuca varılamaması durumunda her iki taraf da anlaşmazlığın giderilmesi için, DHMİ Genel Müdürlüğü Seyrüsefer Daire Başkanlığı makamına başvuracaklardır.
+
+14 İptal :
+
+14.1 Bu Anlaşma Mektubu onaylayan otoritelerin karşılıklı anlaşmalarıyla her an iptal edilebilir.
+
+15 Geçerlilik :
+
+15.1 Bu Anlaşma Mektubu 14.09.2015 saat: 00.01 UTC itibarıyla yürürlükte olacaktır.
+
+15.2 16.05.2012 tarihli Ankara ACC ile Çaycuma TWR arasındaki anlaşma mektubunu iptal eder.
+
+Ankara, 10 / 09 / 2015
+
+Şefik ÇULCUOĞLU  
+Şube Müdürü  
+
+Önder TOYDEMİR  
+Şube Müdürü  
+
+Ankara ACC ve Çaycuma TWR arasındaki LoA-14.09.2015 Sayfa: 6/6

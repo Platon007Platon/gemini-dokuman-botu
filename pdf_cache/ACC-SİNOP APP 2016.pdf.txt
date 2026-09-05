@@ -1,0 +1,364 @@
+
+--- SAYFA 1 (ACC-SİNOP APP 2016.pdf) ---
+**ANLAŞMA MEKTUBU**
+
+**ANKARA ACC**  
+**ve**  
+**SİNOP APP**  
+**arasında**
+
+**Geçerlilik: 01.03.2016 – 00.01 UTC**
+
+### **1 Genel:**
+
+#### **1.1 Amaç:**
+Bu anlaşma mektubunun amacı ANKARA ACC ile SİNOP APP arasında Genel Hava Trafik (IFR / VFR) ve Operasyonel Hava trafiğine ATS sağlanırken uygulanacak koordinasyon yöntemlerini tanımlamaktır. Bu yöntemler, ICAO ve Eurocontrol ve / veya Ulusal belgelerde belirtilmiş olanlara ilavedir.
+
+#### **1.2 Operasyonel Durum**
+Her iki ATS ünitesi de bu anlaşma mektubunda belirtilen uygulamaları etkileyebilecek, kolaylıklar ve seyrüsefer yardımçılarının operasyonel durumundaki herhangi bir değişiklikten birbirlerini haberdar edeceklerdir.
+
+#### **1.3 Genel Hava Trafik ve Operasyonel Hava Trafiğinin Tanımlanması**
+
+##### **1.3.1 Genel Hava Trafik (GAT)**
+"ICAO kuralları ve koşullarına göre yapılan uçuşlar"
+
+##### **1.3.2 Operasyonel Hava Trafik (OAT)**
+"GAT için belirlenmiş koşullara uymayan kuralları ve uygulamaları uygun otorite tarafından konulmuş uçuşlar."
+
+---
+
+### **2 Sorumluluk:**
+Bu anlaşma mektubu ile saptanmış hükümlerin yerine getirilmesinden ANKARA ACC ve SİNOP APP kontrol sorumludur.
+
+---
+
+### **3 Sorumluluk sahaları:**
+Birimlerin yatay ve dikey sorumluluk sahaları şu şekildedir:
+
+#### **3.1 ANKARA ACC:**
+* **Yatay limitleri:** Türkiye Cumhuriyeti AIP'sinde yayımlandığı gibi.
+* **Dikey limitleri:** GND – UNL
+
+#### **3.2 SİNOP APP:**
+* **Yatay limitleri:** Türkiye Cumhuriyeti AIP'sinde yayımlandığı gibi
+* **Dikey limitleri:** 1000 FT AMSL / FL 240
+
+---
+
+### **4 Tanımlar ve Kısaltmalar:**
+
+#### **4.1 Sorumluluk Sahası:**
+Tek bir ATS ünitesinin hava trafik servisinin sağlamakla sorumlu olduğu boyutları belirli hava sahasıdır.
+
+##### **4.1.1 Approval Request:**
+Bir ATS ünitesinin diğer bir ATS ünitesinden uçuş süresi, transferin devredileceği kontrol noktasına kararlaştırılmış minimum zamandan daha az olan henüz havalanmamış bir uçak için
+
+---
+
+*Ankara ACC ve SİNOPAPP arasındaki LoA - 01.03.2016*  
+*Sayfa: 1/8*
+
+--- SAYFA 2 (ACC-SİNOP APP 2016.pdf) ---
+veya karşılıklı kararlaştırılmış uygulamalarda tanımlanmış durumların dışında uçmak isteyen uçuş halindeki bir uçağın onayı ile ilgili taleptir.
+
+4.1.2 **Expedite Clearance:**
+Bir ATS ünitesinin diğer bir ATS ünitesinden uçuş süresi, transferin devredildiği kontrol noktasına kararlaştırılmış minimum önceden bildirme zamanından daha az olan uçuştaki bir uçak ile ilgili acele klerans talebidir.
+
+4.1.3 **Tırmanma Müsaadesi:**
+Belirli bir uçağın kontrolün devredildiği noktadan önce tırmanması için kontrolü devralacak ünite tarafından verilecek müsaadedir.
+Not: Kontrolü devredecek ünite aksi kararlaştırılmadığı sürece kendi sorumluluk sahası içinde ayırma dan sorumlu kalmaya devam eder.
+
+4.1.4 **Alçalma Müsaadesi:**
+Belirli bir uçağın kontrolün devredildiği noktadan önce alçaltılması için kontrolü devreden üniteye verdiği müsaadedir.
+Not: Kontrolü devredecek ünite aksi kararlaştırılmadığı sürece kendi sorumluluk sahası içinde ayırma dan sorumlu kalmaya devam eder.
+
+4.1.5 **Dönüş Müsaadesi:**
+Belirli bir uçağın devredildiği noktadan önce uçuş planı rotasından 45 dereceden fazla olmayacak şekilde kontrolü devralacak ünite tarafından verilen müsaadedir.
+Not: Kontrolü devredecek ünite aksi kararlaştırılmadığı sürece kendi sorumluluk sahası içinde ayırma dan sorumlu kalmaya devam eder.
+
+4.2 **Kısaltmalar:**
+
+| Kısaltma | Açıklama |
+| :--- | :--- |
+| AIP | Aeronautical Information Publication |
+| AMSL | Above Mean Sea Level |
+| AoR* | Area of Responsibility |
+| ATC | Air Traffic Control |
+| ATS | Air Traffic Services |
+| CFMU | Central Flow Management Unit |
+| COP* | Co-ordination Point |
+| ETO | Estimated Time Over Significant Point |
+| ENR | En-Route |
+| FD | Flight Data |
+| FDPS* | Flight Data Processing System |
+| FIR | Flight Information Region |
+| FMP* | Flow Management Position |
+| GAT* | General Air Traffic |
+| IAS | Indicated Air Speed |
+| ICAO | International Civil Aviation Organisation |
+| IFR | Instrument Flight Rules |
+| LoA* | Letter of Agreement |
+| MFC* | Multi Frequency Coding (telephone system) |
+| NM | Nautical Mile |
+| OAT* | Operational Air Traffic |
+| ORCAM | Originating Region Code Assignment Method |
+| RTF | Radio Telephony |
+| RVSM | Reduced Vertical Separation Minimum |
+| SSR | Secondary Surveillance Radar |
+| VFR | Visual Flight Rules |
+
+Not: (*) işaretli kısaltmalar non-ICAO kısaltmalardır.
+
+Ankara ACC ve SİNOPAPP arasındaki LoA – 01.03.2016  
+Sayfa: 2/8
+
+--- SAYFA 3 (ACC-SİNOP APP 2016.pdf) ---
+5 Koordinasyon Usulleri:
+
+5.1 ATS Yolları, Koordinasyon Noktaları ve Uçuş Seviyelerinin Dağılımı.
+
+5.1.1 ANKARA ACC’den SİNOP APP’ye uçuşlar:
+
+| ATS YOLLARI | COP ( Coordination Point ) | VARIŞ MEYDANI | MNM. FL |
+| :--- | :--- | :---: | :---: |
+| W/UW 90 | SUNUM | | FL 130 |
+| UT 61 | SİNOP TMA Kontrol sahası sınırı | | FL 300 |
+| W/UW 86 | GERZE | LTCM | FL 140 |
+| UW704 | SİNOP TMA Kontrol sahası sınırı | | FL 300 |
+| N/UN 644 | ATNOP | | FL 130 |
+| W/UW 96 | SİNOP TMA Kontrol sahası sınırı | | FL 170 |
+
+5.1.2 SİNOP APP’den ANKARA ACC’ye uçuşlar:
+
+| ATS YOLLARI | COP ( Coordination Point ) | VARIŞ MEYDANI | MNM. FL |
+| :--- | :--- | :---: | :---: |
+| W/UW 90 | SUNUM | | FL 120 |
+| UT 61 | SİNOP TMA Kontrol sahası sınırı | | FL 290 |
+| W/UW 86 | GERZE | LTCM | FL 130 |
+| UW 704 | SİNOP TMA Kontrol sahası sınırı | | FL 290 |
+| N/UN 644 | ATNOP | | FL 120 |
+| W/UW 96 | SİNOP TMA Kontrol sahası sınırı | | FL 160 |
+
+5.1.3 SİNOP APP kalkacak trafikler için, CFMU tarafından yayınlanmış bütün mesajları takip etmekle sorumludur. Ready mesajı AFTN vasıtası ile SİNOP APP tarafından çekilecektir. READY mesajı çekmek için yeterli koşullar sağlanamıyorsa ya da herhangi bir sorunla karşılaşıldığında gerekli koordinasyon için ANKARA FMP ile temas edecektir.
+
+5.1.4 LTCM’ye inecek trafikler zorunlu haller dışında (Emergency, Hava durumu) kesinlikle yol dışına veya uçuş planındaki yolun dışında bir başka yola vektör edilmeyecek. Zorunlu hallerde yol dışına alınan trafiklerin bilgisi SİNOP APP’a bildirilecektir.
+
+5.1.5 ANKARA ACC ile SİNOP APP karşılıklı mutabakat sağlamadıkça kontrol devir noktalarında bekleme yaptıramaz.
+
+5.1.6 UT61 yolu ile LTCM’ye inecek ve LTCM’den kalkacak olan trafikleri ANKARA ACC MERZİFON APP ile koordine edecektir.
+
+5.2 Uçuşların Kabulünün Genel Hükümleri:
+
+5.2.1 Uçuşların koordinasyonunda 5.1.1 ve 5.1.2 madde de yer alan COP’lar referans olarak alınacaktır.
+
+5.2.2 Uçuşların sözlü koordinasyonunda alçalışta SİNOP APP’nin verdiği veya tırmanışta ANKARA ACC’nin vermiş olduğu seviyeler dikkate alınacaktır.
+
+5.2.3 Eğer kabul eden ATS ünitesi teklif edilen uçuşu yukarıda belirlenen şartlarda kabul etmiyor ise neden kabul etmediğini ve hangi şartlarda kabul edeceğini açık bir şekilde belirtmelidir.
+
+---
+Ankara ACC ve SİNOPAPP arasındaki LoA - 01.03.2016  
+Sayfa: 3/8
+
+--- SAYFA 4 (ACC-SİNOP APP 2016.pdf) ---
+5.2.4 Bu ekte belirtilen şartlardan başka bir yöntem uygulanmak istenirse (örn: COP, route veya uçuş seviyesi) devreden ünite approval request isteyecektir.
+
+5.2.5 Kabul eden ATS ünitesi, özel bir istek olmadıkça transfer edilen uçakla yer/hava muharebesinin sağlandığını transfer eden ATS ünitesine bildirmek zorunda değildir.
+
+5.3. **Uçuş Bilgilerinin Karşılıklı Aktarımı:**
+Geçerli uçuş planı verileri transfer eden üniteden, kabul eden üniteye telefon vasıtası ile aktarılır.
+
+5.3.1. **Sözlü Estimate'ler:**
+
+5.3.1.1 ANKARA ACC’den SİNOP APP’ye uçuşlar:
+Sözlü estimate’ler kabul eden ATS ünitesine trafiklerin devredileceği transfer noktalarına tahmini varış saatlerinden en az **15 (on beş) dakika** önce aktarılacaktır.
+Verilecek Bilgiler:
+a) Çağrı adı
+Not: Uçuş planının var olduğunu belirtmek için kabul eden ünite çağrı adını aldıktan sonra uçak tipi ve gidiş meydanını söylemelidir. Şayet uçuş planı mevcut değil ise Kalkış - gidiş meydanı ve uçak tipi aşağıdaki maddelere ek olarak verilecektir.
+b) SİNOP tahmini varış zamanı
+c) Uçuş seviyesi veya karşılıklı koordine sağlanmış ise tırmandığı - alçaldığı seviye.
+d) Varsa gerekli olan diğer bilgiler.
+
+5.3.1.2 SİNOP APP’den ANKARA ACC’ye uçuşlar:
+a) Çağrı adı
+b) Kalkış saati
+c) Bir sonraki zorunlu rapor noktası tahmini
+
+5.4 **Değişiklikler:**
+Uçuş verileri ile ilgili önemli değişiklikler kabul eden ATC ünitesine aktarılacaktır. **3 (üç)** dakikayı aşan farklılıkların bilgisi iletilmelidir.
+Transfer noktasına **5 (beş)** dakika kala yapılacak seviye değişiklikleri Approval Request ile koordine edilir.
+
+5.5 **Expedite Clearance and Approval Request:**
+Sözlü estimate’ler devir noktasına **10 (on)** dakika kalana kadar verilmemişse, expedite clearance veya approval request (hangisi uygun ise) uygulanacaktır.
+
+6. **<u>Yer / Yer Muharebesinin Gayri faal Olması Durumu:</u>**
+
+6.1. **Fall-Back Durumunda Koordinasyon Usulleri:**
+Tarafların karşılıklı koordine için direkt konuşma hatlarını kullanması gerektiğinde, bu hatların kesilmesi durumunda koordinasyon aşağıdaki yollarla sağlanabilir.
+A- Komşu ACC ünitelerinin direkt telefon hatları ile
+
+| ANKARA ACC | | |
+| :--- | :--- | :--- |
+| ACC Sektör | Tel | :(0312) 5905902 |
+| | Tel | :(0312) 5905903 |
+| ACC Supervisor | Tel | :(0312) 5905500 |
+| | Tel | :(0312) 5905510 |
+| | Fax | :(0312) 8271061 |
+| FMP Supervisor | | :(0312) 5905550 |
+| FMP Ünitesi (24hr) | | :(0312) 5905551 |
+
+---
+Ankara ACC ve SİNOP APP arasındaki LoA - 01.03.2016 | Sayfa: 4/8
+
+--- SAYFA 5 (ACC-SİNOP APP 2016.pdf) ---
+SİNOPAPP: Tel : (0368) 2715608 / 1122 –1123
+Fax : (0368) 2715607
+VOIP : 479571 / 1122 –1123
+
+B- AFTN
+
+ANKARA ACC:
+ACC supervisor LTAAZRZX
+
+SİNOPAPP:
+APP supervisor LTCMZTZX – LTCMZAZX
+
+6.2. Fall-Back Durumunda Alternatif Koordinasyon Usulleri:
+Muhabere kaybında madde 5,1’de belirtilen usullerin uygulanamadığı durumlarda, ANKARA ACC devreceği SİNOP APP’den giriş müsaadesi alabilmesi için, pilotlara TMA giriş noktalarına varış tahminlerinden en az 10 (on) dakika öncesinden bu ünite ile uygun frekans üzerinden temas etmesi talimatını verecek. SİNOP APP ise kalkan trafikleri devir noktalarından önce ANKARA ACC ile temas etmesi talimatı verecektir.
+Eğer kabul eden ünite ilk temasta pilota giriş müsaadesi veremiyor ise pilota bunu devreden üniteye RTF kanalı vasıtasıyla temas etmesi istenecektir.
+Devreden ATC ünitesi uçağı kendi sorumluluk sahası içinde beklemeye alacak en az 10 (on) dakika sonra devredilecek ünite ile RTF kanalı vasıtasıyla temas etmesi istenecektir.
+Bu uygulama devredilen ATC ünitesinden müsaade alınana kadar devam edecektir.
+
+7. VFR Uçuşlar:
+
+7.1 VFR Uçuş Uygulamaları
+7.1.1 VFR Uçuşlarla ilgili karşılıklı bilgi alış-verişi aşağıdaki gibi uygulanacaktır.
+
+a) VFR
+b) Çağrı adı, uçak tipi, varış meydanı, varsa SSR kodu
+c) Rotası ve uçuş seviyesi (irtifa)
+d) Bir sonraki noktaya tahmini varışı veya eğer uçak ANKARA veya SİNOP TMA Kontrol Sorumluluk Sahası içinde bir meydana incekse o meydana varış tahminini.
+e) Varsa gerekli olan diğer bilgiler.
+
+7.1.2 Alan ünitede eğer uçuş planı mevcut değil ise aşağıdakiler ilave edilecektir.
+
+a) Kalkış ve varış meydanları
+b) Uçuşun daha sonraki rotası
+c) Varsa ek malumat (eğer gerekiyorsa)
+
+7.1.3 Grup halinde olan VFR uçuşlarda temas halinde olunan grup liderinin çağrı adı kadar grupta bulunan uçak sayısı da belirtilmelidir.
+
+7.1.4 Kabul eden ATS ünitesi VFR trafik ile temas kurduğunu transfer eden ATS ünitesine bildirecektir.
+
+7.1.5 VFR trafikler ile ilgili bilgiler trafiğin kontrol sahası sınırını tahmini geçiş saatinden en az 15 (on beş) dakika öncesine kadar verilmelidir.
+
+7.1.6 Uçuş ile ilgili değişen bilgiler ve 5 (beş) dakika veya daha fazla olan değişiklikler üniteler arasında transfer edilecektir.
+
+Ankara ACC ve SİNOPAPP arasındaki LoA - 01.03.2016 Sayfa: 5/8
+
+--- SAYFA 6 (ACC-SİNOP APP 2016.pdf) ---
+8.	**Transit Trafiklerin Koordinasyonu :**
+
+8.1	SİNOP TMA’yı FL 240 dahil altında kat edecek transit trafiklerin bilgisi 5.3.1 maddesinde olduğu gibi sözlü estimate olarak SİNOP APP’ye verilecektir.
+8.1.1	Aksi bildirilmedikçe kontrol ve muhaberenin devri kontrol sahası sınırında yapılacaktır.
+
+9.	**Kontrolün ve Muhaberenin devri:**
+
+9.1	Kontrolün Devri Kontrolün devri aksi bildirilmedikçe AoR’da yapılır (sorumluluk sahası sınırında). ANKARA ACC, LTCM’ye inecek trafikleri 1 numara en altta olacak şekilde sıralayarak, SİNOP APP’ye gönderecektir. Ayırma sorumluluğu SİNOP APP’de olan trafiklerin ayırmayı müteakiben tırmanacakları Final seviye ANKARA ACC tarafından SİNOP APP’ye bildirilecektir.
+
+9.2	**Muhaberenin Devri**
+Aksi bildirilmedikçe muhaberenin devri, kontrolün devrindən daha geç olamayacaktır.
+
+**Frekanslar:**
+
+**ANKARA ACC:**
+| Frekans | Birim |
+| :--- | :--- |
+| 128.650 | MHz |
+| 133.550 | MHz |
+| 259.925 | MHz |
+
+**SİNOP APP:**
+| Frekans | Birim |
+| :--- | :--- |
+| 119.200 | MHz |
+| 118.025 | MHz |
+| 279.025 | MHz |
+
+10.	**SSR Kod Tahsisi :**
+
+10.1	SİNOP APP TMA'nın dışına çıkacak tüm uçuşlar için ANKARA ACC'den SSR KOD tahsisi isteyecektir.
+
+10.1.1 Pilot tarafından Transponder ile ilgili bir arıza bildirildiğinde, zaman geçirilmeden ANKARA ACC’ye bildirilecektir.
+
+11.	**Değişiklikler :**
+
+11.1	Anlaşma Mektubu Değişikliği.
+Bu Anlaşma Mektubunun değişikliği, imza sahibi otoritenin karşılıklı izin vermelerini gerektirir.
+
+12.	**Yorumlama ve Anlaşmazlıklarda Uzlaşma :**
+
+12.1	Geçerli anlaşma mektubunun herhangi bir şartını yorumlamada veya uygulanmasında anlaşmazlıklar çıkması gibi bir durumda şüpheler veya farklı görüşler varsa taraflar her iki tarafın da kabul edebileceği bir sonuca varmak için çalışacaktır. Bir sonuca varılamaması durumunda her iki taraf da anlaşmazlığın giderilmesi için DHMİ Genel Müdürlüğü Seyrüsefer Daire Başkanlığı makamına başvuracaklardır.
+
+13.	**İptal:**
+
+13.1 Bu Anlaşma Mektubu, onaylayan otoritelerden iptal talep eden tarafın 45 GÜN önceden haber vermesi şartıyla karşılıklı olarak iptal edilebilir.
+
+---
+*Ankara ACC ve SİNOPAPP arasındaki LoA - 01.03.2016* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Sayfa.6/8*
+
+--- SAYFA 7 (ACC-SİNOP APP 2016.pdf) ---
+14 Geçerlilik:
+
+14.1 Bu Anlaşma Mektubu 01.03.2016 saat: 00.01 UTC itibarıyla yürürlükte olacaktır. 22.11.2010 da yürürlüğe giren ANKARA ACC ve SİNOP APP arasındaki Anlaşma Mektubunun yerini alacaktır. Taraflardan iptal talebi gelmediği sürece her yıl otomatik olarak yenilenmiş kabul edilecektir.
+
+
+SİNOP / 16 / 02 / 2016
+
+(İmza)
+Osman Yaşar ÖZYÜRÜK
+HSS Ünite Sorumlusu
+
+
+ANKARA / 04 / 02 / 2016
+
+(İmza)
+İlker ÖDEMİŞ
+ACC/APP Ünite Sorumlusu
+
+
+(İmza)
+Önder TOYDEMİR
+THTKM Hava Trafik Şube Müdürü
+
+
+---
+Ankara ACC ve SİNOP APP arasındaki LoA – 01.03.2016  |  Sayfa: 7/8
+
+--- SAYFA 8 (ACC-SİNOP APP 2016.pdf) ---
+Ankara ACC ve SİNOPAPP arasındaki LoA – 01.03.2016
+
+# İLAVE DEĞİŞİKLİKLER
+
+| Sayı | Tarih | Değişiklik | Sayfa No | Sayfa No | Sayfa No |
+| --- | --- | --- | --- | --- | --- |
+| | | | Değiştirilen | Eklenen | Çıkarılan |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+
+Sayfa: 8/8

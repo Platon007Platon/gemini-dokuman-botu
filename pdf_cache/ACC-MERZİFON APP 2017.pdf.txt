@@ -1,0 +1,917 @@
+
+--- SAYFA 1 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC                                                                                   MERZİFON APP
+
+---
+
+### ANLAŞMA MEKTUBU
+
+**ANKARA ACC**
+**ve**
+**MERZİFON APP**
+**arasında**
+
+**Geçerlilik** : 01.06.2017, 00:01UTC
+
+**1. Genel :**
+
+**1.1 Amaç :**
+
+Bu anlaşma mektubunun amacı ANKARA ACC ile MERZİFON APP arasında Genel Hava Trafik (IFR/VFR) ve Operasyonel Hava Trafiğine ATS sağlanırken uygulanacak koordinasyon yöntemlerini tanımlamaktır.
+Bu yöntemler, ICAO ve Eurocontrol ve/veya Ulusal belgelerde belirtilmiş olanlara ilavedir. ACC ve APP sektörleri arasında koordinasyon ve çalışma usullerini içerir.
+
+**1.2 Operasyonel Durum**
+
+Her iki ATS ünitesi de bu anlaşma mektubunda belirtilen uygulamaları etkileyebilecek, kolaylıklar, sistemler ve seyrüsefer yardımcısının operasyonel durumundaki herhangi bir değişiklikten birbirlerini haberdar edeceklerdir.
+
+**2. Sorumluluk, Sorumluluk Sahaları ve ATS Şartları İçin Sorumluluğun Devri:**
+
+Bu anlaşma mektubunun uygulanması ve saptanmış hükümlerin yerine getirilmesinden Ankara ACC ve Merzifon APP sorumludur.
+
+**2.1 Sorumluluk Sahaları**
+
+Birimlerin yatay ve dikey sorumluluk sahaları şu şekildedir:
+**Not:** ATS şartları için sorumluluğun temsilinin uygulanabileceği alanların tanımına bölüm 2.2'den bakınız.
+
+**2.1.1 ANKARA ACC**
+
+Yatay ve dikey limitleri: Türkiye Cumhuriyeti AIP'sinde yayımlandığı gibi.
+
+ICAO hava sahası sınıflandırmasına göre ACC'nin sorumluluk sahası beraberinde; Ankara ACC ve Merzifon APP sorumluluk sahaları genel sınırları bu anlaşma mektubunun EK-B kısmında tanımlanmıştır.
+
+**2.1.2 MERZİFON APP**
+
+Yatay ve dikey limitleri: Türkiye Cumhuriyeti AIP'sinde yayımlandığı gibi.
+
+---
+
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.06.2017                                          1
+
+--- SAYFA 2 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC
+MERZİFON APP
+
+2.2 ATS Şartları İçin Sorumluluğun Devri
+
+Uygulaması yoktur.
+
+2.2.1 Diğer Sahalar:
+
+Uygulaması yoktur.
+
+2.2.2 İkaz Hizmeti:
+
+ATS koşullarından sorumlu ATS üniteleri ikaz hizmeti ve koordinasyonunu sağlayacaklardır.
+
+2.2.3 Bölgesel Konular:
+
+Uygulaması yoktur.
+
+2.3 Özel Uygulamalar:
+
+Uygulaması yoktur.
+
+3. Uygulamalar
+
+3.1 ANKARA ACC ve Merzifon APP tarafından uygulanacak uygulamalar bu Anlaşma Mektubunun Eklerinde detaylandırılmıştır.
+
+EK A: Tanımlar ve Kısaltmalar
+EK B: Ortak İlgi Sahası
+EK C: Uçuş Verilerinin Karşılıklı Değişimi
+EK D: Koordinasyon Usulleri
+EK E: Kontrolün Devri ve Muhaberenin Devri
+EK F: ATS Gözetim Sistemleri Esaslı Koordine Usulleri ve İlave Usuller
+EK G: Ek Usuller
+EK H: İlave ve Değişiklikler
+
+3.2 Bu uygulamalar ATS ünitelerini kapsayan operasyonel görevlilere resmen açıklanarak yürürlüğe koyulacaktır.
+
+4. Değişiklikler ve Sapmalar
+
+4.1 Anlaşma Mektubunun Değişikliği
+
+Bu Anlaşma Mektubunun değişikliği ekler hariç imza sahibi otoritenin karşılıklı izin vermelerini gerektirir.
+
+4.2 Anlaşma Mektubundaki Eklerin Değişikliği
+
+Anlaşma Mektubundaki eklerin değişikliği imza sahibi otoritelerin yetkili kıldığı otoritelerce, karşılıklı ünitelerin operasyon sorumlularının izin vermelerini gerektirir.
+
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.06.2017
+2
+
+--- SAYFA 3 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC
+
+MERZİFON APP
+
+4.3 Geçici Sapmalar
+
+Gerektiğinde ilgili ATS ünitelerinin sorumluları belirli bir zaman periyodunu kapsayacak şekilde karşılıklı anlaşma ile var olan Anlaşma Mektubu Eklerinde belirtilen uygulamalarda geçici modifikasyonlara gidebilirler.
+
+4.4 Rastlantısal Sapmalar
+
+Bu Anlaşma Mektubu eklerinde belirtilen uygulamalarda yapılacak küçük sapmalar sonucunda meydana gelecek durumlar olabilir. Bu durumlar karşısında Hava Trafik Kontrolörlerinden hava trafiğinin emniyetini ve verimliliğini temin edecek en doğru kararı vermeleri beklenir.
+
+5. İptal
+
+Bu Anlaşma Mektubu, onaylayan otoritelerden herhangi bir tarafın isteğiyle iptal etmek isteyen tarafın iptal etme tarihinden 90 gün önce bu niyetini deklare etmesi koşullarının sağlanmasıyla her an mümkündür.
+
+6. Yorumlama ve Anlaşmazlıklarda Uzlaşma
+
+6.1 Geçerli anlaşma mektubunun herhangi bir şartını yorumlamada veya uygulanmasında anlaşmazlıklar çıkması gibi bir durumda şüpheler veya farklı görüşler varsa taraflar, her iki tarafın da kabul edebileceği bir sonuca varmak için çalışacaklardır.
+
+6.2 Bir sonuca varılamaması durumunda anlaşmazlığın giderilmesi Merzifon APP Hava Kuvvetleri Kom. Hv. Svn. ve Kom. Kont. D. Hava Trafik Şube Müdürlüğü 'ne, Ankara ACC DHMİ Genel Müdürlüğü'ne Seyrüsefer Dairesi Başkanlığı makamına başvuracaklardır.
+
+7. Yürürlük Tarihi
+
+7.1 Bu anlaşma mektubu imza tarihinden itibaren 1 yıl geçerli olup, anlaşmanın sona erme tarihinden 2 ay öncesine kadar birimler yazılı herhangi bir değişiklik önerisi getirmediği sürece yürürlük süresi otomatik olarak 1 yıl için yenilenmiş olur.
+
+7.2 Bu anlaşma mektubu 01.06.2017, 00:01 UTC tarihinden itibaren yürürlüğe girer ve 01.08.2015 tarihli ANKARA ACC ile MERZİFON APP arasındaki anlaşma mektubunu iptal eder.
+
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.06.2017
+
+3
+
+--- SAYFA 4 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC / MERZİFON APP
+
+Ankara, 10 / 05 / 2017
+[İmza]
+Mithat YORGANCI
+Ankara ACC Hava Trafik Kontrolörü
+
+Ankara, 10 / 05 / 2017
+[İmza]
+Harun KARAUL
+Hv. Trf. Ütğm.
+Merzifon APP
+
+Ankara, 10 / 05 / 2017
+[İmza]
+Önder TOYDEMİR
+Hava Trafik Kontrol Merkezi Şube Müdürü
+
+Ankara, 10 / 05 / 2017
+[İmza]
+Orhan KARAKÜTÜK
+Hv. Trf. Kd. Bçvş.
+Merzifon APP
+
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.06.2017 | 4
+
+--- SAYFA 5 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC
+
+MERZİFON APP
+
+**EK A**
+**Tanımlar ve Kısaltmalar**
+
+Geçerlilik : 01.06.2017, 00:01UTC
+Değişiklik :
+
+**A.1 Tanımlar**
+
+**A.1.1 Sorumluluk Sahası**
+
+Tek bir ATS ünitesinin hava trafik servisinin sağlamakla sorumlu olduğu boyutları belirli hava sahasıdır.
+
+**A.1.2 Genel Hava Trafik (GAT)**
+
+ICAO kuralları ve koşullarına göre uçuş yapan trafikler
+
+**A.1.3 Operasyonel Hava Trafik (OAT)**
+
+GAT için belirlenmiş koşullara uymayan, kuralları ve uygulamaları uygun otorite tarafından konulmuş usullere göre uçuş gerçekleştiren trafikler
+
+**A.1.4 Ortak İlgi Sahası**
+
+İki ATS ünitesince kararlaştırıldığı gibi olan komşu sektör / alt komşu sektör sorumluluk sahalarına uzanan içinde hava sahası yapısı ve bununla ilgili aktivitelerin hava trafik koordinasyon uygulamalarına etki edebileceği hava sahası parçasıdır.
+
+**A.1.5 Approval Request**
+
+Bir ATS ünitesinin diğer bir ATS ünitesinden uçuş süresi, transferin devredileceği kontrol noktasına kararlaştırılmış minimum zamandan daha az olan henüz havalanmamış bir uçak için veya karşılıklı kararlaştırılmış uygulamalarda tanımlanmış durumların dışında uçmak isteyen uçuş halindeki bir uçağın onayı ile ilgili taleptir.
+
+**A.1.6 Expedite Clearance**
+
+Bir ATS ünitesinin diğer bir ATS ünitesinden uçuş süresi, transferin devredildiği kontrol noktasına kararlaştırılmış minimum önceden bildirme zamanından daha az olan uçuştaki bir uçak ile ilgili acele müsade talebidir.
+
+**A.1.7 Müsaade (Release)**
+
+**A.1.7.1 Tırmanma Müsaadesi**
+
+Belirli bir uçağın kontrolün devredildiği noktadan önce tırmanması için kontrolü devralacak ünite tarafından verilecek müsaadedir.
+Not: Kontrolü devredecek ünite aksi kararlaştırılmadığı sürece kendi sorumluluk sahası içinde ayırmadan sorumlu kalmaya devam eder.
+
+---
+
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.06.2017
+A-1
+
+--- SAYFA 6 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC
+MERZİFON APP
+
+A.1.7.2 Alçalma Müsaadesi
+
+Belirli bir uçağın kontrolün devredildiği noktadan önce alçaltılması için kontrolü devralacak ünite tarafından verilecek müsaadedir.
+Not: Kontrolü devredecek ünite aksi kararlaştırılmadığı sürece kendi sorumluluk sahası içinde ayırmadan sorumlu kalmaya devam eder.
+
+A.1.7.3 Dönüş Müsaadesi
+
+Belirli bir uçağın devredildiği noktadan önce uçuş planı rotasından 45'den fazla olmayacak şekilde kontrolü devralacak ünite tarafından verilen müsaadedir.
+
+Not: Kontrolü devredecek ünite aksi kararlaştırılmadığı sürece kendi sorumluluk sahası içinde ayırmadan sorumlu kalmaya devam eder.
+
+A.2 Kısaltmalar
+
+| Kısaltma | Açıklama |
+| :--- | :--- |
+| ACC | Area Control Center |
+| AIP | Aeronautical Information Publication |
+| AMC* | Airspace Management Cell |
+| AMSL | Above Mean Sea Level |
+| Aor* | Area of Responsibility |
+| APP | Approach |
+| ATC | Air Traffic Control |
+| ATS | Air Traffic Services |
+| CDR | Conditional Route (Koşullu yol) |
+| COP* | Co-ordination Point |
+| ENR | En-Route |
+| ETO | Estimated Time Over Significant Point |
+| FUA | Flexible Use of Airspace |
+| FD | Flight Data |
+| FIR | Flight Information Region |
+| FMP* | Flow Management Position |
+| GAT* | General Air Traffic |
+| IAS | Indicated Air Speed |
+| ICAO | International Civil Aviation Organisation |
+| IFR | Instrument Flight Rules |
+| LoA* | Letter of Agreement |
+| MFC* | Multi Frequency Coding (telephone system) |
+| MTMA* | Military Terminal Area |
+| NM | Nautical Mile |
+| OAT* | Operational Air Traffic |
+| ORCAM | Originating Region Code Assignment Method |
+| RTF | Radio Telephony |
+| RVSM | Reduced Vertical Separation Minimum |
+| SSR | Secondary Surveillance Radar |
+| TRA | Temporary Reserved Area (Geçici Rezerve Saha) |
+| TSA | Temporary Segregated Area (Geçici Ayrılmış Saha) |
+| VFR | Visual Flight Rules |
+
+Not: (*) işaretli kısaltmalar non-ICAO kısaltmalardır.
+
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.06.2017
+A-2
+
+--- SAYFA 7 (ACC-MERZİFON APP 2017.pdf) ---
+**ANKARA ACC**
+**MERZİFON APP**
+
+---
+
+### **EK B**
+### **Ortak İlgi Sahası**
+
+**Geçerlilik:** 01.06.2017, 00:01UTC  
+**Değişiklik:** 01.08.2017, 00:01UTC  
+
+---
+
+#### **B.1 Ortak İlgi Sahası İçerisindeki Hava Sahası Yapısı ve Sınıflandırılması**
+
+##### **B.1.1 ANKARA FIR**
+Türkiye Cumhuriyeti AIP’sinde yayımlandığı gibidir.
+
+##### **B.1.2 MERZİFON MTMA**
+Türkiye Cumhuriyeti AIP’sinde yayımlandığı gibidir.
+
+---
+
+#### **B.2 Sektörizasyon**
+Ek-B’nin 1. İlavesi ‘nde gösterilmektedir.
+
+##### **B.2.1 Ankara ACC Sektörleri**
+Yatay ve dikey limitleri: Türkiye Cumhuriyeti AIP’sinde yayımlandığı gibi.
+
+---
+
+#### **B.3 Askeri Çalışma Sahaları**
+Ek-B’nin 2. İlavesi ‘nde gösterilmektedir.
+
+##### **B.3.1 5-A Çalışma Sahası:**
+
+| YERİ | KOORDİNATLARI | İRTİFA |
+| :--- | :--- | :--- |
+| Merzifon MTMA içerisinde | 40 49 31 N – 35 30 35 E merkez olmak üzere 20 NM olan saha | AGL+3000 feet-FL280 |
+
+##### **B.3.2 5-B Çalışma Sahası:**
+
+| YERİ | KOORDİNATLARI | İRTİFA |
+| :--- | :--- | :--- |
+| Merzifon MTMA Kuzeydoğusunda | 41 15 37 N – 034 15 58 E | FL100– FL 280 |
+| | 41 43 25 N – 034 29 30 E | |
+| | 41 40 14 N – 035 05 56 E | |
+| | 41 27 10 N – 035 37 57 E | |
+| | 41 08 13 N – 035 28 24 E | |
+
+---
+
+**Dipnot / Alt Bilgi:**  
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.08.2017  
+**Sayfa:** B-1
+
+--- SAYFA 8 (ACC-MERZİFON APP 2017.pdf) ---
+**ANKARA ACC**  
+**MERZİFON APP**
+
+---
+
+### B.3.3 5-C Çalışma Sahası:
+
+| YERİ | KOORDİNATLARI | İRTİFA |
+| :--- | :--- | :--- |
+| Merzifon MTMA Batısında | 40 41 48 N – 033 59 44 E | FL100 – FL 280 |
+| | 41 15 37 N – 034 15 58 E | |
+| | 41 08 13 N – 035 28 24 E | |
+
+---
+
+### B.3.4 5-D Çalışma Sahası:
+
+| YERİ | KOORDİNATLARI | İRTİFA |
+| :--- | :--- | :--- |
+| Merzifon MTMA Güneybatısı | 40 16 00 N – 033 53 00 E | FL100 – FL 280 |
+| | 40 21 00 N – 033 53 00 E | |
+| | 40 35 00 N – 034 38 00 E | |
+| | 40 10 00 N – 034 57 00 E | |
+
+---
+
+### B.3.5 5-E1 Çalışma Sahası:
+
+| YERİ | KOORDİNATLARI | İRTİFA |
+| :--- | :--- | :--- |
+| Merzifon MTMA Güneyinde | 40 45 00 N – 036 13 00 E | FL100 – FL 280 |
+| | 40 00 00 N – 036 11 00 E | |
+| | 40 06 10 N – 035 25 17 E | |
+| | 40 18 00 N – 035 18 00 E | |
+
+---
+
+### B.3.6 5-E2 Çalışma Sahası:
+
+| YERİ | KOORDİNATLARI | İRTİFA |
+| :--- | :--- | :--- |
+| Merzifon MTMA doğusu Tokat CTR üzeri | 40 12 00 N – 036 37 00 E | FL150 – FL280 |
+| | 40 00 00 N – 036 11 00 E | Alt limit Tokat CTR sebebiyle FL150 olup Ankara ACC ve Tokat TWR ile koordine edilerek FL100’e kadar kullanılabilecektir. |
+| | 40 45 00 N – 036 13 00 E | |
+| | 40 41 04 N – 036 30 40 E | |
+
+---
+
+### B.3.7 5-F Çalışma Sahası:
+
+| YERİ | KOORDİNATLARI | İRTİFA |
+| :--- | :--- | :--- |
+| Merzifon MTMA doğusu ORI NDB/DME Güneyi | 40 03 00 N – 037 03 00 E | FL120 – FL 280 |
+| | 40 47 00 N – 036 53 00 E | |
+| | 40 47 00 N – 038 56 00 E | |
+| | 40 08 00 N – 039 13 00 E | |
+
+---
+
+**Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.08.2017**  
+**B-2**
+
+--- SAYFA 9 (ACC-MERZİFON APP 2017.pdf) ---
+**ANKARA ACC**
+**MERZİFON APP**
+
+---
+
+### B.3.7.1 5-F1 Alt Çalışma Sahası:
+
+| YERİ | KOORDİNATLARI | İRTİFA |
+| :--- | :--- | :--- |
+| Merzifon MTMA doğusu <br> Sivas TMA içerisi | 40 03 00 N – 037 03 00 E | FL210 – FL 280 |
+| | 40 18 04 N – 036 59 36 E | |
+| | 40 04 42 N – 037 40 50 E | |
+
+---
+
+### B.3.8 5-G Çalışma Sahası:
+
+| YERİ | KOORDİNATLARI | İRTİFA |
+| :--- | :--- | :--- |
+| Merzifon MTMA dışında <br> Sinop Kuzeybatısı deniz <br> üzeri | 42 05 00 N – 034 00 00 E | MSL 1000 feet – FL 280 |
+| | 42 08 00 N – 034 45 00 E | |
+| | 42 17 00 N – 035 12 00 E | |
+| | 42 32 00 N – 034 15 00 E | |
+
+---
+
+### B.3.9 5-K1 Çalışma Sahası:
+
+| YERİ | KOORDİNATLARI | İRTİFA |
+| :--- | :--- | :--- |
+| Merzifon MTMA dışında <br> Ordu Kuzeyi deniz üzeri | 42 25 00 N – 037 00 00 E | FL300 – FL500 |
+| | 42 05 00 N – 039 19 00 E | |
+| | 41 52 00 N – 039 16 00 E | |
+| | 41 17 00 N – 038 35 00 E | |
+| | 41 20 00 N – 037 32 00 E | |
+| | 41 50 00 N – 036 45 00 E | |
+
+---
+
+### B.3.10 H-1 Helikopter Çalışma Sahası:
+
+| YERİ | KOORDİNATLARI | İRTİFA |
+| :--- | :--- | :--- |
+| Merzifon MTMA içerisinde | 41 12 00 N – 035 15 00 E | 0 – 5000 feet MSL |
+| | 41 18 00 N – 035 15 00 E | |
+| | 41 18 00 N – 035 24 00 E | |
+| | 41 12 00 N – 035 24 00 E | |
+
+---
+*Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.08.2017*
+*B-3*
+
+--- SAYFA 10 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC
+MERZİFON APP
+
+**B.3.11 H-2 Helikopter Çalışma Sahası:**
+
+| YERİ | KOORDİNATLARI | İRTİFA |
+| :--- | :--- | :--- |
+| Merzifon MTMA içerisinde | 40 54 00 N – 035 07 00 E | 0 – 8000 feet MSL |
+| | 41 00 00 N – 035 07 00 E | |
+| | 41 00 00 N – 035 17 00 E | |
+| | 40 54 00 N – 035 17 00 E | |
+
+**B.3.12 H-3 Helikopter Çalışma Sahası:**
+
+| YERİ | KOORDİNATLARI | İRTİFA |
+| :--- | :--- | :--- |
+| Merzifon MTMA içerisinde | 40 48 00 N – 035 30 00 E | 0 – 5000 feet MSL |
+| | 40 41 00 N – 035 30 00 E | |
+| | 40 41 00 N – 035 42 00 E | |
+| | 40 48 00 N – 035 42 00 E | |
+
+**B.3.13 H-4 Helikopter Çalışma Sahası:**
+
+| YERİ | KOORDİNATLARI | İRTİFA |
+| :--- | :--- | :--- |
+| Merzifon MTMA içerisinde | 40 57 00 N – 035 35 00 E | 0 – 7000 feet MSL |
+| | 41 05 00 N – 035 35 00 E | |
+| | 41 05 00 N – 035 25 00 E | |
+| | 40 57 00 N – 035 25 00 E | |
+
+**B.3.14 H-5 Helikopter Çalışma Sahası:**
+
+| YERİ | KOORDİNATLARI | İRTİFA |
+| :--- | :--- | :--- |
+| Çarşamba TMA içerisinde | 41 15 00 N – 036 30 00 E | 0 – 3000 feet MSL |
+| | 41 30 00 N – 036 30 00 E | |
+| | 41 30 00 N – 036 10 00 E | |
+| | 41 15 00 N – 036 10 00 E | |
+
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.08.2017
+B-4
+
+--- SAYFA 11 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC / MERZİFON APP
+
+Ek B'nin 1.İlavesi
+Sektörizasyon
+
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.08.2017
+
+--- SAYFA 12 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC
+MERZİFON APP
+
+Ek B'nin 2.İlavesi
+Askeri Çalışma Sahaları
+
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.08.2017
+
+B-6
+
+--- SAYFA 13 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC  
+MERZIFON APP
+
+---
+
+**EK C**  
+**Uçuş Bilgilerinin Karşılıklı Değişimi**
+
+**Geçerlilik** : 01.06.2017, 00:01UTC  
+**Değişiklik** :  
+
+**C.1 Genel**
+
+**C.1.1 Temel Uçuş Planları**
+
+Temel uçuş plan verileri ATS ünitelerinde mevcuttur.
+
+**C.1.2 Geçerli Uçuş Planı Verisi**
+
+**C.1.2.1 Trafik Bilgilerinin Otomatik Değişimi**
+
+Uygulaması yoktur.
+
+**C.1.2.2 Sözlü Tahminiler**
+
+Trafik bilgileri transfer noktalarına varış tahminlerinden **en geç 15 dakika, en erken 30 dakika** önce aşağıdaki şekilde aktarılacaktır.
+
+a. Çağrı adı,  
+&nbsp;&nbsp;&nbsp;&nbsp;**Not:** Uçuş planının var olduğunu belirtmek için kabul eden ünite çağrı adını aldıktan sonra uçak tipi ve gidiş meydanını söyleyecektir.  
+b. COP (Koordinasyon Noktası),  
+c. Ek D'de gösterilen COP üzerine tahmini varış zamanı,  
+d. Uçuş seviyesi, eğer trafik alçalış ya da tırmanışta devredilecekse, trafiğin tırmandığı veya alçaldığı seviye,  
+e. **SSR Kod:** Kalkış trafikleri için Ankara ACC tarafından tahsis edilecektir.  
+f. RVSM Statüleri  
+g. Diğer Bilgiler  
+
+**C.1.3 Temel Uçuş Plan Verilerinin Olmaması Durumu**
+
+Kabul eden ünite temel uçuş plan verilerine sahip değilse devreden ünite talep edilen uçuş planı verilerini iletecektir.
+
+**C.1.4 Değişiklikler**
+
+Uçuş verileri ile ilgili önemli değişiklikler kabul eden ATC ünitesine aktarılacaktır. **3(üç)** dakikayı aşan farklılıkların bilgisi iletilmelidir.
+
+**C.1.5 Expedite Clearance and Approval Request**
+
+Sözlü trafik bilgileri devir noktasına **10 dakika** kalana kadar verilmemiş ise, expedite clearance veya approval request (hangisi uygun ise) uygulanacaktır.
+
+---
+
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.06.2017  
+C-1
+
+--- SAYFA 14 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC
+
+MERZİFON APP
+
+**C.2 İletişim Araçları ve Kullanımı**
+
+**C.2.1 Donanım**
+
+Ankara ACC ve Merzifon APP arasında aşağıdaki hatlar mevcuttur:
+Direk Telefon Hattı, Belgegeçer ve Telefonu, AFTN devreleri
+
+**C.2.2 Sözlü Koordine**
+
+Tüm telefon konuşmaları iki tarafın da initial’lerini vermesi ile bitirilecektir.
+
+**C.3 Yer / Yer Muhaberesinin Gayrifaal Olması Durumu**
+
+**C.3.1 Fall-Back Durumunda Koordinasyon Usulleri**
+
+Karşılıklı koordine yapan tarafların direkt konuşma hatlarının kesilmesi durumunda koordinasyon aşağıdaki yollarla sağlanabilir:
+
+A- Komşu üniteler vasıtasıyla
+
+B- Ünitelerde bulunan şehirlerarası telefon hatları ile
+
+**ANKARA ACC**
+
+| Görev / Unvan | Telefon Numarası |
+| :--- | :--- |
+| ACC Sektör Sorumlusu | : (0312) 5905501 |
+| ACC/APP Ekip Sorumlusu | : (0312) 5905500 |
+| ACC/APP Ünite Birim Sorumlusu | : (0312) 5905510 |
+| ACC/APP Belgegeçer | : (0312) 8271061 |
+| FMP Sorumlusu | : (0312) 5905550 |
+| FMP Ünitesi (24hr) | : (0312) 5905551 |
+
+**MERZİFON APP**
+
+| Görev / Unvan | Telefon Numarası |
+| :--- | :--- |
+| APP | : (0358) 5362336 / RAPCON / KULE |
+| APP Belgegeçer | : (0358) 5362341 |
+
+**C- AFTN**
+
+**ANKARA ACC**
+Sivil Asker Koordinasyon Birimi : LTAAFUAX
+
+**MERZİFON APP**
+: LTAPYXYX
+
+---
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.06.2017
+C-2
+
+--- SAYFA 15 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC                                                                                      MERZİFON APP
+
+C.3.2 Fall-Back Durumunda Alternatif Koordinasyon Usulleri
+
+C.3.2.1 Kalkış meydanı Merzifon APP sorumluluk sahasında olan trafikler için usuller:
+
+Trafikler kalkışa müteakip MNI VOR üzerinde maksimum FL 280’a tırmanarak ANKARA ACC ile ATC müsaadesi için temas kurmaya çalışacak temas kurar ise bu durumu MERZİFON APP’ye aktaracak. Şayet temas mümkün olmaz ise tekrar kalkış meydanına inecek.
+
+C.3.2.2 İniş meydanı Merzifon APP sorumluluk sahasında olan trafikler için usuller:
+
+ANKARA ACC tarafından trafiklerin en kısa zamanda MERZİFON APP ile teması sağlanacak. Trafik minimum FL 290 alçaltılıp MNI VOR üzerine müsaade edilip MERZİFON APP ile temas etmeye çalışacak, temas etmesi durumunda bu bilgiyi ANKARA ACC’ye bildirecek ve MERZİFON APP ile tekrar temas ederek alçalma ve yaklaşma müsaadesini MERZİFON APP’den alacak. Trafik MERZİFON APP ile temas edememesi durumunda ANKARA ACC ile tekrar temas ederek yedek meydanına dönüş için ATC müsaadesi alacaktır.
+
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.06.2017                                                        C-3
+
+--- SAYFA 16 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC
+
+MERZİFON APP
+
+**EK D**
+**Koordinasyon Usulleri**
+
+Geçerlilik : 01.06.2017, 00:01UTC
+Değişiklik :
+
+**D.1 Uçuşların Kabulünün Genel Hükümleri**
+
+D.1.1 Uçuşların koordinasyonunda konu ile ilgili rotalardaki COP'lar ve bu rotalardaki LoA ile belirlenmiş dikey limitler dâhilinde uçuş seviyeleri referans olarak alınacaktır. (Bkz: madde D.2)
+
+D.1.2 Madde D.2'deki tanımlar hariç uçuşların sözlü koordinasyonda alçalışta veya tırmanışta olduğu açık olarak belirtilmemişse, transfer noktalarında daha önce koordine edilen uçuş seviyesini muhafaza ettiği kabul edilecektir.
+
+D.1.3 Eğer kabul eden ATS ünitesi teklif edilen uçuşu belirlenen şartlarda kabul etmiyor ise neden kabul etmediğini ve de hangi şartlarda kabul edeceğini açık bir şekilde belirtmelidir.
+
+D.1.4 Bu ekte belirtilen şartlardan başka bir yöntem uygulanmak istenirse (örn: COP, yol, uçuş seviyesi ) devreden ünite approval request isteyecektir.
+
+D.1.5 Kabul eden ATS ünitesi, özel bir istek olmadıkça transfer edilen uçakla yer/hava muharebesinin sağlandığını transfer eden ATS ünitesine bildirmek zorunda değildir.
+
+D.1.6 8.33 kHz Kanal Aralığı Uygulaması
+
+Uygulaması yoktur.
+
+D.1.7 Transit Trafikler
+
+D.1.7.1 MERZİFON MTMA'yı kat edecek transit trafiklerin bilgisi Ankara ACC tarafından sözlü tahmini olarak Merzifon APP'ye verilecektir.
+
+D.1.7.2 Üniteler arasında, transit trafikler için kontrol ve muhabererenin devri, aksi koordine edilmedikçe Merzifon MTMA sınırında yapılacaktır.
+
+**D.2 ATS Yolları, Koordinasyon Noktaları ve Uçuş Seviyelerinin Dağılımı**
+
+Madde D.3'deki tanımların aksi belirtilmedikçe, kullanılabilir ATS yolları, COP'ların kullanımı, uçuş seviyelerinin dağılımı aşağıdaki tablolarda tanımlanmıştır.
+
+---
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.06.2017 | D-1
+
+--- SAYFA 17 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC  MERZİFON APP
+
+D.2.1 ANKARA ACC’den MERZİFON APP’ye uçuşlar:
+
+| ATS Yolları | COP | Varış Meydanı | Min. FL | Özel Uygulamalar |
+| --- | --- | --- | --- | --- |
+| Türkiye Cumhuriyeti AIP ‘sinde yayımlandığı gibi. | HAVZA<br><br>ERGUN | LTAP | FL290 | |
+
+D.2.2 MERZİFON APP’den ANKARA ACC’ye uçuşlar:
+
+| ATS Yolları | COP | Kalkış Meydanı | Max. FL | Özel Uygulamalar |
+| --- | --- | --- | --- | --- |
+| Türkiye Cumhuriyeti AIP ‘sinde yayımlandığı gibi. | HAVZA<br><br>ERGUN | LTAP | FL280 | |
+
+**D.3 Özel Uygulamalar**
+
+**D.3.1** Ankara ACC ile Merzifon APP karşılıklı mutabakat sağlamadıkça kontrol devir noktalarında bekleme yaptırılmaz.
+
+**D.3.2** Trafikler acil durum, hava muhalefeti ve ayırma amacı dışında kesinlikle COP dışında bir noktaya müsaade edilmeyeceklerdir. Eğer trafik yol dışına çıkarılmışsa komşu ünite bilgilendirilecektir.
+
+**D.3.3** Trafikler arasında ayırma gereken durumlarda, trafikler devir noktalarına yakın bir yerde karşılaşacaklarsa, ayırmanın hangi ünite tarafından yapılacağı koordinasyonda net olarak belirtilecek ve ayırma mutabık kalınan şekilde uygulanacaktır.
+
+**D.3.4** Trafikler arasında yeterli uzunlamasına ayırma mevcut değil ise D.2 ‘deki seviyeler dikkate alınarak öndeki trafiğin bir üst seviyesine alçaltılacaktır/tırmandırılacaktır.
+
+**D.3.5** Hava sahasının esnek kullanımı çerçevesinde tüm uçuş önceliği askeri uçuşlarda olacak şekilde günlük uçuş faaliyetinin tamamlanmasını takiben, hafta sonu ve tatil günlerinde Merzifon MTMA ve çalışma sahalarının üst limiti yapılacak koordineye müteakip FL200’a çekilebilecektir. Askeri uçuşun olması halinde Merzifon APP’nin ikazı ile üst limit FL280’a çıkarılacaktır.
+
+**D.3.6 ANKARA ACC’den MERZİFON APP’ye uçuşlar için usuller:**
+
+**D.3.6.1** Trafiğe ait bilgi COP’lara tahmini varışından en geç **15 dakika**, en erken **30 dakika** önce verilmelidir. Bu sürenin altında kalmayı gerektirecek durumlarda birimler arası mutabakat şarttır.
+
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.06.2017  
+D-2
+
+--- SAYFA 18 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC
+
+MERZİFON APP
+
+Bir geliş malumatı aşağıdaki bilgileri içerecektir.
+
+a. Uçak çağrı adı
+b. Kalkış Meydanı
+c. Tipi
+d. Uçuş seviyesi veya alçalacağı seviye
+e. COP tahminisi
+
+D.3.6.2 Merzifon APP kullanılan pist, yaklaşma türü ve talep edilmesi halinde diğer bilgileri ANKARA ACC'ye aktaracaktır. Değişiklikler APP tarafından ACC 'ye zaman geçirilmeden bildirilecektir.
+
+D.3.6.3 ANKARA ACC trafik talep etmesi durumunda yaklaşma türünü, kullanılan pisti ve gerektirdiği durumlarda meydan altimetresini, rüyet ve muhtemel yaklaşma zamanını verecektir.
+
+D.3.6.4 MERZİFON APP, kontrol sahasında oluşan önemli meteorolojik olayları veya hava trafiğinin akışına etki edecek diğer olayları zaman geçirmeden ANKARA ACC'ye bildirecektir.
+
+D.3.6.5 W/UW71 (ERGUN-HAVZA) yoluyla Çarşamba meydanına inecek trafiklerin bilgisi Ankara ACC tarafından Merzifon APP'a ve Çarşamba APP'ye verilecektir. Aksi koordine edilmediği sürece ilgili trafik ERGUN noktasında Merzifon APP'ye gönderilecek ve daha sonraki koordinasyon Merzifon APP ile Çarşamba APP arasında yapılacaktır.
+
+D.3.7 MERZİFON APP'den ANKARA ACC'ye uçuşlar için usuller:
+
+D.3.7.1 Kalkış meydanında READY mesajı çekmek için yeterli koşullar sağlanamıyorsa ya da herhangi bir sorunla karşılaşıldığında gerekli koordinasyon için ANKARA ACC ile temas edilecektir.
+
+D.3.7.2 Merzifon APP kalkacak trafikler için, CFMU tarafından yayınlanış CTOT var ise bu saatten, yok ise uçağın planında belirttiği muhtemel kalkış zamanından en erken 15 en geç 5 dakika önce ANKARA ACC'den kalkacak trafik için ATC müsaadesi alacaktır. Şayet uçuş planı ANKARA ACC'de mevcut değilse uçuş plan özetini yazdıracaktır.
+
+Plan özeti aşağıdaki bilgileri içerecek.
+
+a. Uçak çağrı adı ve tipi
+b. Muhtemel kalkış zamanı
+c. İstenilen seviye veya seviyeler
+d. Uçuş yolu veya yolları
+e. Gideceği meydan
+f. RVSM statüsü
+
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.06.2017
+
+D-3
+
+--- SAYFA 19 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC                                                                                                                                                           MERZİFON APP
+
+D.3.7.3 Ankara ACC 'den alınan ATC Müsaadeleri tahmini kalkış saatinden itibaren 15 dakikalık süre içerisinde geçerliliğini koruyacak bu süreyi aşan gecikmelerde Merzifon APP yeni bir ATC müsaadesi talep edecektir.
+
+D.3.7.4 MERZİFON APP gece uçuşları, Profil vb. uçuşlar için gerekli koordinasyonun sağlanması açısından uçuşun başlamasından en az 30 dakika önce uçuşla ilgili bilgileri ANKARA ACC'ye bildirecektir. ANK-ACC bu uçuşlarla ilgili müsaadeyi uçuşun başlamasından en geç 15 dakika önce MERZİFON-APP'a aktaracaktır. Uçuş planları doldurulurken/yazdırılırken yol bilgisi, yayınlanmış fix veya koordinatlardan oluşacaktır. Yalın coğrafi isimler kullanılmayacaktır. Uçuşlar, olağan şartlar altında, koordine edilen yol, seviyeyi ve IFF kodunu muhafaza edecek ve plan dahilinde hareket edeceklerdir. Aksi koordine edilmediği sürece CTR, TMA'lar ihlal edilmeyecektir.
+
+D.3.7.5 IFR uçuşlarda ANKARA ACC'den istenen uçuş seviyeleri kontrollü yollar için belirlenen asgari yol irtifanın veya minumum sektör irtifanın altında olmayacaktır. IFR seviyeler kontrollü yol ve sahalar için geçerlidir. MERZİFON APP uçuşların başlangıç ve bitimini Ankara ACC'ye bildirecektir.
+
+D.3.7.6 Çarşamba meydanından kalkarak Merzifon MTMA'yı kat edecek trafikler için, Çarşamba APP ilgili trafik için ATC müsaadesini ilk önce Ankara ACC'den alacak ve daha sonra gerekli koordinasyon için Merzifon APP ile temas kuracaktır. Çarşamba APP kalkan trafiklerin bilgisini zaman geçirmeden Merzifon APP'ye bilahare Ankara ACC'ye bildirecek ve aksi bildirilmedikçe kalkan trafikleri kontrol sahasını terk ettiğinde veya mutabık kalınan yer ve seviyede Merzifon APP'ye gönderecektir. Merzifon APP ile Çarşamba APP arasındaki telefon hattının gayri faal olması durumunda gerekli bütün koordinasyonu Ankara ACC, Merzifon APP ile yapacak ve Çarşamba APP'ye bildirecektir.
+
+**D.4   Askeri Çalışma Sahaların Koordinesi**
+
+D.4.1 Sahalar kullanım talepleri Merzifon APP ve/veya Erzurum KİM tarafından Ankara ACC'ye iletilmediği sürece sahalar boş kabul edilecektir.
+
+D.4.2 Merzifon APP ünitesi tarafından Merzifon 5F, 5E1, 5E2 sahalarının aktif edilmesi/kullanılması durumunda ilgili askeri üniteler tarafından Ankara ACC ile gerekli koordine başlatılacak ve akabinde Ankara ACC tarafından sahalardan etkilenen ilgili sivil ATS üniteleri ile koordine sağlanacaktır.
+
+D.4.3 Sahaların kullanımı esnasında sivil uçuşların en az etkilenmelerini teminen 5E1, 5E2 ve 5F sahalarının tahditli kullanımını gerektirecek durumlarda Ankara ACC tarafından Erzurum KİM ve gerekli durumlarda Merzifon APP bilgilendirilecektir.
+
+D.4.4 İlgili sahalar için bahse konu tahditler kalkış trafiği için müsaade alındıktan itibaren TMA/CTR terk edene veya ACC tarafından belirtilen bir zamana kadar, iniş trafikleri için CTR sınırı veya TMA giriş noktasında olacağı zamandan 10 dakika öncesinden veya ACC tarafından belirtilen bir zamandan iniş bilgisi alına kadar geçerlidir. Ankara ACC tahditin başlangıç ve bitişinde Erzurum KİM/Merzifon APP 'i ikaz edecektir. Ankara ACC tarafından mümkün olduğu sürece trafiklerin kat ettiği seviyeler dikkate alınarak saha alt limitleri revize edilecektir.
+
+---
+
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.06.2017                                                                                             D-4
+
+--- SAYFA 20 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC                                                                                      MERZİFON APP
+
+D.4.5 Merzifon APP Çalışma sahalarını kullanmaya başlamadan en az 30 dk önce ve bitiminde Ankara ACC'ye bilgi verecektir. Çalışma bölgelerine VFR şartlarda aksi koordine edilmediği sürece Merzifon APP'nin kontrolünde, IFR şartlarda ise Ankara ACC ile koordine kurulacaktır.
+
+D.4.6 Meteorolojik koşullar, beklenmedik olağan üstü durumlar vb sebeplerle askeri sahalara kaçınma yapan trafiklerin çağrı adı, SSR kodu ve seviyesi Ankara ACC tarafından Erzurum KİM'e mümkün olmadığı durumlarda Merzifon APP'ye iletilir.
+
+D.4.7 Merzifon H-5 sahasının kullanımı Merzifon APP ile Çarşamba APP arasında koordine edilerek kullanılacaktır.
+
+D.4.8 **Ordu-Giresun TMA İçerisinde İniş-Kalkış Trafikleri Olduğu Durumlarda Merzifon 5F Sahasının Koordinesi**
+
+LTCB iniş kalkış trafiği olduğunda, D.4.4 maddesinde belirtilen koşulda, Merzifon 5F sahasında uçuş gerçekleştiren askeri trafikler Ordu-Giresun TMA'yi ihlal etmeyeceklerdir.
+
+D.4.9 **Tokat CTR İçerisinde İniş-Kalkış Trafikleri Olduğu Durumlarda Merzifon 5E1 ve 5E2 Sahasının Koordinesi**
+
+5E1 ve/veya 5E2 sahaları dolu olduğu zamanlarda LTAW iniş-kalkış trafiklerinin çağrı adı, tahmini kalkış-iniş zamanı ve SSR kodu ACC tarafından Erzurum KİM'e verilecektir.
+
+LTAW iniş-kalkış trafiği olduğunda, D.4.4 maddesinde belirtilen koşulda, askeri trafikler 5E1 çalışma sahasını FL130-FL280 arasında kullanacaklardır.
+
+5E1 ve 5E2 çalışma sahası dolu olduğu zaman LTAW'ye inişler TIMOP-ENFOR-TKT(TOKAT) rotasında ENFOR noktasında FL120 olacak şekilde Ankara ACC tarafından planlanacaktır. Aynı şekilde 5E1 ve 5E2 çalışma sahası dolu olduğu zaman LTAW'den kalkışlarda ENFOR-TIMOP rotası uygulanacak, mümkünse kalkışlar doğuya planlanacaktır.
+
+D.4.10 **Sivas TMA İçerisinde İniş-Kalkış Trafikleri Olduğu Durumlarda Merzifon 5F Sahasının Koordinesi**
+
+LTAR iniş-kalkış trafiği olduğunda, D.4.4 maddesinde belirtilen koşulda, Merzifon 5F sahası için; 5F-1 sahası FL 210-280 arasında kullanılacaktır.
+
+5F sahası dolu olduğu zamanlarda Ankara ACC, LTAR iniş trafiklerini Sivas TMA giriş noktalarında FL200 veya altında olacak şekilde alçalttacaktır.
+
+
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.06.2017                                          D-5
+
+--- SAYFA 21 (ACC-MERZİFON APP 2017.pdf) ---
+**ANKARA ACC**
+**MERZİFON APP**
+
+**D.5 VFR Uçuşlar**
+
+D.5.1 VFR Uçuşlar için karşılıklı bilgi alış-verişi aşağıdaki gibi uygulanacaktır.
+
+* a. Çağrı adı, (varsa) SSR kodu, uçak tipi, kalkış meydanı ve saati,
+* b. Rotası ve uçuş seviyesi (irtifa)
+* c. Gidiş Meydanı varış tahmini, kontrollü yol ve sahaları kat ediş zamanları.
+* d. Gerekli diğer bilgiler.
+
+D.5.2 Grup halinde olan VFR uçuşlarda temas halinde olunan grup liderinin çağrı adı ve grupta bulunan uçak sayısı belirtilmelidir.
+
+D.5.3 VFR trafikler ile ilgili bilgiler trafiğin ilgili sektörün sorumluluk sahasına giriş saatinden en az 15 ( onbeş ) dakika öncesine kadar verilmelidir.
+
+D.5.4 Uçuş ile ilgili değişen bilgiler ve 5 dakika veya daha fazla olan değişiklikler üniteler arasında transfer edilecektir.
+
+---
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.06.2017
+**D-6**
+
+--- SAYFA 22 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC
+
+MERZİFON APP
+
+**EK E**
+**Kontrolün Devri ve Muhaberenin Devri**
+
+Geçerlilik : 01.06.2017, 00:01UTC
+Değişiklik :
+
+**E.1 Kontrolün Devri**
+
+E.1.1 Kontrolün devri aksi koordine edilmedikçe COP'larda yapılır.
+
+E.1.2 Karşı ünite tarafından aksi bildirilmedikçe ilgili üniteler trafiklerini, kontrolündeki diğer trafiklerden ayırdıktan sonra trafiğin kontrolü ile birlikte muhaberenin devrini yapacaktır.
+
+**E.2 Muhaberenin Devri**
+
+Muhaberenin devrinde taraflar tarafından aksi bildirilmedikçe aşağıdaki frekanslar kullanılacaktır.
+
+| Ünite | Frekanslar |
+| :--- | :--- |
+| Ankara ACC | 133.675<br>128.450<br>128.800<br>131.050<br>243.000<br>278.800<br>362.300<br>372.625 |
+| Merzifon APP | 122.100<br>362.300 |
+| Çarşamba APP | 118.175<br>118.225<br>362.300 |
+
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.06.2017
+
+E-1
+
+--- SAYFA 23 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC
+MERZİFON APP
+
+**EK F**
+**ATS Gözetim Sistemleri Esaslı Koordine Usulleri ve İlave Usuller**
+
+Geçerlilik : 01.06.2017, 00:01 UTC
+Değişiklik :
+
+**F.1 Genel**
+
+F.1.1 Merzifon APP MTMA dışına çıkacak tüm uçuşlar için “transponder code” tahsis edecektir.
+
+F.1.2 Trafik tarafından transponder ile ilgili bir arıza bildirildiğinde, Merzifon APP zaman geçirilmeden Ankara ACC ‘ye bildirilecektir.
+
+F.1.3 Merzifon MTMA içerisinden kalkış yapacak VFR trafikler Merzifon MTMA ‘yı terk edecek ise “transponder code” kullanılması ile ilgili olan AIP hükmü ENR 1.6 Madde 6.1 ‘de belirtilen şartları yerine getireceklerdir.
+
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.06.2017
+F-1
+
+--- SAYFA 24 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC
+
+MERZİFON APP
+
+**EK G**  
+**Ek Usuller**
+
+Geçerlilik : 01.06.2017, 00:01UTC  
+Değişiklik :
+
+**G.1 Contingency Planı**
+
+**G.1.1 Ankara ACC’nin Contingency Duruma Düşmesi**
+
+Ankara ACC ‘de herhangi bir olağanüstü olay (Deprem, yangın, terör saldırısı, toplu zehirlenme vb.) veya ATM kaynaklarında oluşabilecek geniş çaplı radar kesintisi, haberleşme veya network kaybı ve benzeri durumlar sonucunda hava trafik hizmetinin verilememesi ve/veya hava trafik hizmetinin emniyetle sağlanamayacağı durumlarda; **Ankara ACC için ATC hizmeti Yeşilköy APP tarafından yapılacaktır.**
+
+Ankara ACC tarafından Merzifon APP’ye bilgi verilmemişse, durum hakkında bilgi Yeşilköy APP tarafından Merzifon APP’ye verilecektir.
+
+**G.1.2 Merzifon APP’nin Contingency Duruma Düşmesi**
+
+Uygulaması yoktur.
+
+---
+
+Ankara ACC ile Merzifon APP Arasındaki Anlaşma Mektubu 01.06.2017  
+G-1
+
+--- SAYFA 25 (ACC-MERZİFON APP 2017.pdf) ---
+ANKARA ACC
+MERZİFON APP
+
+**EK H**
+**İlave ve Değişiklikler**
+
+Geçerlilik : 01.06.2017, 00:01 UTC
+Değişiklik : 01.08.2017, 00:01 UTC
+
+| Sayı | Tarih | Ekler | Sayfa No | Sayfa No | Sayfa No |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| | | | Değişen | Eklenen | Çıkarılan |
+| 1 | 01.08.2017 | B | B1, B2, B3, B5 | B6 | - |
+
+---
+Ankara ACC ve Merzifon APP Arasındaki Anlaşma Mektubu 01.08.2017
+H-1
