@@ -1,48 +1,29 @@
-# 📄 RAG-Based Aviation & Document Assistant (Belge Asistanı)
+# Aviation Document Assistant (RAG System)
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
-[![LangChain](https://img.shields.io/badge/LangChain-RAG-orange)](https://www.langchain.com/)
-[![Gemini API](https://img.shields.io/badge/Gemini%20API-Embeddings%20%26%20Chat-green)](https://ai.google.dev/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-UI-FF4B4B)](https://streamlit.io/)
-
-Kullanıcıların yüklediği PDF, TXT veya dokümanlar üzerinden akıllı sorular sorulmasını, vektör tabanlı arama yapılmasını ve Gemini LLM desteğiyle kaynağa dayalı (RAG) yanıtlar alınmasını sağlayan Streamlit tabanlı doküman asistanı uygulaması.
+A high-performance **Retrieval-Augmented Generation (RAG)** application built with Python and Streamlit. This assistant enables users to upload complex aviation documents (PDFs) and perform precise, context-aware semantic search and Question-Answering (QA) using Google's Gemini models and ChromaDB vector store.
 
 ---
 
-## 🏗️ Sistem Mimarisi (RAG Workflow)
+## 📌 Features
 
-Sistem; yüklenen dokümanların parçalanması, Google Gemini Embedding modelleri ile vektörleştirilmesi ve ChromaDB üzerinde saklanarak kullanıcı sorgularına en yakın bağlamın LLM'e sunulması mantığıyla çalışır.
-
----
-
-## 🚀 Çalıştırma Adımları (Getting Started)
-
-### 1. Repoyu Klonlayın
-git clone https://github.com/KULLANICI_ADIN/BELGE_ASISTANI_REPO_ADI.git
-cd BELGE_ASISTANI_REPO_ADI
-
-### 2. Sanal Ortam (Virtual Environment) Oluşturun
-python -m venv venv
-# Windows için:
-venv\Scripts\activate
-# macOS / Linux için:
-source venv/bin/activate
-
-### 3. Bağımlılıkları Yükleyin
-pip install streamlit langchain-core langchain-google-genai langchain-chroma pypdf python-dotenv
-
-### 4. Çevre Değişkenlerini (.env) Ayarlayın
-Projenin ana dizininde bir .env dosyası oluşturun ve Gemini API anahtarınızı ekleyin:
-GOOGLE_API_KEY=senin_gemini_api_anahtarin_buraya
-
-### 5. Uygulamayı Başlatın
-streamlit run app.py
+*   **PDF Document Ingestion:** Extracts text from uploaded aviation PDF manuals, documentation, and technical guidelines.
+*   **Vector Search & Embeddings:** Chunking and embedding generation using ChromaDB for high-accuracy semantic retrieval.
+*   **LLM-Powered QA:** Generates accurate, context-grounded answers powered by Google's Gemini LLM.
+*   **Source Citation:** Displays relevant context snippets and source references for transparency and verification.
+*   **Interactive UI:** Clean, intuitive web interface powered by Streamlit.
 
 ---
 
-## 🛠️ Kullanılan Teknolojiler
-- Yapay Zeka & Dil Modeli: Google Gemini API (gemini-1.5-flash)
-- Metin Temsili (Embeddings): Google Generative AI Embeddings (models/text-embedding-004)
-- Vektör Veritabanı: ChromaDB
-- Dosya Okuma: PyPDF & LangChain Document Loaders
-- Arayüz: Streamlit
+## 🏗️ Architecture
+
+```mermaid
+graph TD
+    A[PDF Upload] --> B[Text Extraction & Chunking]
+    B --> C[Generate Embeddings]
+    C --> D[(Chroma Vector DB)]
+    E[User Query] --> F[Vector Similarity Search]
+    D --> F
+    F --> G[Relevant Context Chunks]
+    G --> H[Gemini LLM]
+    E --> H
+    H --> I[Grounded Answer & Citations]
