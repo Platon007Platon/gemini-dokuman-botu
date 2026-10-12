@@ -54,6 +54,3 @@ Open your browser and navigate to http://localhost:8501.
 
 Contributions are welcome! Feel free to open an issue or submit a pull request for any enhancements or bug fixes.
 
-## License
-
-Distributed under the MIT License. See LICENSE for more information.
